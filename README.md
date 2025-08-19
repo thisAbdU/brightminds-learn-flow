@@ -1,73 +1,46 @@
-# Welcome to your Lovable project
+# BrightMinds Learn Flow
 
-## Project info
+A modern React application built with Vite, TypeScript, and shadcn/ui components.
 
-**URL**: https://lovable.dev/projects/d9ed992e-aba9-4d5d-a743-e05d99509987
+## Quick Start
 
-## How can I edit this code?
+```bash
+# Install dependencies
+pnpm install
 
-There are several ways of editing your application.
+# Start development server
+pnpm dev
 
-**Use Lovable**
-
-Simply visit the [Lovable Project](https://lovable.dev/projects/d9ed992e-aba9-4d5d-a743-e05d99509987) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+# Build for production
+pnpm build
 ```
 
-**Edit a file directly in GitHub**
+## Available Scripts
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+- `pnpm install` - Install project dependencies
+- `pnpm dev` - Start development server with hot reload
+- `pnpm build` - Build the project for production
+- `pnpm lint` - Run ESLint to check code quality
 
-**Use GitHub Codespaces**
+## Tech Stack
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+- **Frontend**: React 18 + TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui (Radix UI primitives)
+- **Package Manager**: pnpm
 
-## What technologies are used for this project?
+## Development
 
-This project is built with:
+The development server will start at `http://localhost:5173` by default.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## Project Structure
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/d9ed992e-aba9-4d5d-a743-e05d99509987) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+```
+src/
+├── components/     # Reusable UI components
+├── pages/         # Application pages
+├── hooks/         # Custom React hooks
+├── lib/           # Utility functions and configurations
+└── App.tsx        # Main application component
+```

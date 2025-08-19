@@ -59,9 +59,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl">
-              Bright Minds Tutoring offers reliable, personalized academic mentorship from 
-              Ethiopia's top-performing medical students and doctors—combining strong subject 
-              knowledge with motivation.
+               Where learning meets purpose!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -85,25 +83,6 @@ const HeroSection = () => {
                   <Play className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-            </div>
-
-            {/* Trust Indicators */}
-            <div className="mt-12 pt-8 border-t border-border">
-              <p className="text-sm text-muted-foreground mb-4">Trusted by hundreds of students</p>
-              <div className="flex flex-wrap justify-center lg:justify-start gap-8 text-sm text-muted-foreground">
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-primary mr-2">530+</span>
-                  <span>Students Taught</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-secondary mr-2">95%</span>
-                  <span>Positive Feedback</span>
-                </div>
-                <div className="flex items-center">
-                  <span className="text-2xl font-bold text-accent mr-2">70%</span>
-                  <span>Retention Rate</span>
-                </div>
-              </div>
             </div>
           </div>
 
