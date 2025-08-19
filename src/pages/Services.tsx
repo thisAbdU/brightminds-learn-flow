@@ -12,6 +12,7 @@ import {
   ArrowRight,
   Star
 } from "lucide-react";
+import Layout from "@/components/Layout";
 
 const Services = () => {
   const mainServices = [
@@ -139,25 +140,26 @@ const Services = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Our Services
-            </h1>
-            <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
-              Comprehensive educational support designed to help you achieve your academic goals
-            </p>
+    <Layout>
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="pt-0 pb-12 bg-gradient-hero text-white -mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center animate-fade-in pt-16">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                Our Services
+              </h1>
+              <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
+                Comprehensive educational support designed to help you achieve your academic goals
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Main Services */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Our Core{" "}
               <span className="gradient-primary bg-clip-text text-transparent">
@@ -219,9 +221,9 @@ const Services = () => {
       </section>
 
       {/* Pricing Models */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Pricing &{" "}
               <span className="gradient-primary bg-clip-text text-transparent">
@@ -347,7 +349,7 @@ const Services = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="bg-gradient-card rounded-3xl p-8 shadow-card">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
@@ -371,6 +373,7 @@ const Services = () => {
         </div>
       </section>
     </div>
+    </Layout>
   );
 };
 

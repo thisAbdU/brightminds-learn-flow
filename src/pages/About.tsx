@@ -10,26 +10,28 @@ import {
   Award,
   ArrowRight
 } from "lucide-react";
+import Layout from "@/components/Layout";
 
 const About = () => {
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-hero text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              About Bright Minds
-            </h1>
-            <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
-              Where learning meets purpose - transforming education through personalized mentorship
-            </p>
+    <Layout>
+      <div className="min-h-screen">
+        {/* Hero Section */}
+        <section className="pt-0 pb-12 bg-gradient-hero text-white -mt-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center animate-fade-in pt-16">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+                About Bright Minds
+              </h1>
+              <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
+                Where learning meets purpose - transforming education through personalized mentorship
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
       {/* Introduction */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
@@ -88,7 +90,7 @@ const About = () => {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Vision */}
@@ -148,9 +150,9 @@ const About = () => {
       </section>
 
       {/* Core Difference */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
               Our Core{" "}
               <span className="gradient-primary bg-clip-text text-transparent">
@@ -230,6 +232,7 @@ const About = () => {
         </div>
       </section>
     </div>
+    </Layout>
   );
 };
 
