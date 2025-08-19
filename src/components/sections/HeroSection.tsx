@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   const [currentText, setCurrentText] = useState(0);
@@ -30,6 +30,15 @@ const HeroSection = () => {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-hero opacity-5"></div>
+      
+      {/* Addis Ababa City Map Background */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-10"
+        style={{
+          backgroundImage: "url('/addis-ababa-map.png')",
+          filter: "grayscale(100%) brightness(0.8)"
+        }}
+      ></div>
       
       {/* Geometric Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -68,19 +77,8 @@ const HeroSection = () => {
                 className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-primary group"
               >
                 <Link to="/instructors" className="flex items-center">
-                  Start as Student
+                  Find Tutor
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </Link>
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-              >
-                <Link to="/join-tutor" className="flex items-center">
-                  Join as Instructor - It's Free!
-                  <Play className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
             </div>

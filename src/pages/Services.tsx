@@ -366,13 +366,6 @@ const Services = () => {
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
-                <Link to="/join-tutor">Become a Tutor</Link>
-              </Button>
             </div>
           </div>
         </div>

@@ -13,9 +13,17 @@ import {
   GraduationCap,
   User
 } from "lucide-react";
+import RequestForm from "@/components/RequestForm";
 
 const Instructors = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isRequestFormOpen, setIsRequestFormOpen] = useState(false);
+  const [selectedTutor, setSelectedTutor] = useState<{
+    id: number;
+    name: string;
+    subjects: string[];
+    areaCoverage: string[];
+  } | null>(null);
 
   // Sample instructor data
   const instructors = [
@@ -30,7 +38,7 @@ const Instructors = () => {
       availability: "Available Today",
       experience: "5 years",
       location: "Addis Ababa",
-      price: "From $15/hour"
+      areaCoverage: ["CMC", "Ayat", "Bole Medhane Alem Cathedral"]
     },
     {
       id: 2,
@@ -43,7 +51,7 @@ const Instructors = () => {
       availability: "Available Tomorrow",
       experience: "3 years",
       location: "Addis Ababa",
-      price: "From $12/hour"
+      areaCoverage: ["Gurd Shola", "Kotebe", "Kazanchis"]
     },
     {
       id: 3,
@@ -56,7 +64,7 @@ const Instructors = () => {
       availability: "Available Today",
       experience: "4 years",
       location: "Addis Ababa",
-      price: "From $14/hour"
+      areaCoverage: ["Merkato", "Sarbet/Old Airport", "Goro"]
     },
     {
       id: 4,
@@ -69,7 +77,7 @@ const Instructors = () => {
       availability: "Available This Week",
       experience: "2 years",
       location: "Addis Ababa",
-      price: "From $10/hour"
+      areaCoverage: ["CMC", "Ayat", "Bole Medhane Alem Cathedral"]
     },
     {
       id: 5,
@@ -82,7 +90,7 @@ const Instructors = () => {
       availability: "Available Today",
       experience: "6 years",
       location: "Addis Ababa",
-      price: "From $13/hour"
+      areaCoverage: ["Gurd Shola", "Kotebe", "Kazanchis"]
     },
     {
       id: 6,
@@ -95,7 +103,7 @@ const Instructors = () => {
       availability: "Available Tomorrow",
       experience: "3 years",
       location: "Addis Ababa",
-      price: "From $16/hour"
+      areaCoverage: ["Merkato", "Sarbet/Old Airport", "Goro"]
     }
   ];
 
@@ -103,6 +111,9 @@ const Instructors = () => {
     instructor.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     instructor.subjects.some(subject => 
       subject.toLowerCase().includes(searchTerm.toLowerCase())
+    ) ||
+    instructor.areaCoverage.some(area => 
+      area.toLowerCase().includes(searchTerm.toLowerCase())
     )
   );
 
@@ -231,11 +242,16 @@ const Instructors = () => {
                     </div>
                   </div>
 
-                  {/* Price */}
+                  {/* Area Coverage */}
                   <div className="pt-2 border-t border-border">
-                    <p className="text-lg font-semibold text-primary">
-                      {instructor.price}
-                    </p>
+                    <p className="text-sm font-medium text-foreground mb-2">Area Coverage:</p>
+                    <div className="flex flex-wrap gap-1">
+                      {instructor.areaCoverage.map((area, idx) => (
+                        <Badge key={idx} variant="secondary" className="text-xs">
+                          {area}
+                        </Badge>
+                      ))}
+                    </div>
                   </div>
 
                   {/* Actions */}
@@ -243,8 +259,17 @@ const Instructors = () => {
                     <Button 
                       size="sm" 
                       className="flex-1 gradient-primary text-white hover:opacity-90 transition-opacity"
+                      onClick={() => {
+                        setSelectedTutor({
+                          id: instructor.id,
+                          name: instructor.name,
+                          subjects: instructor.subjects,
+                          areaCoverage: instructor.areaCoverage
+                        });
+                        setIsRequestFormOpen(true);
+                      }}
                     >
-                      View Profile
+                      Choose Tutor
                     </Button>
                     <Button 
                       variant="outline" 
@@ -287,6 +312,10 @@ const Instructors = () => {
               <Button 
                 size="lg" 
                 className="gradient-primary text-white hover:opacity-90 transition-opacity"
+                onClick={() => {
+                  setSelectedTutor(null);
+                  setIsRequestFormOpen(true);
+                }}
               >
                 Contact Us
               </Button>
@@ -301,6 +330,16 @@ const Instructors = () => {
           </div>
         </div>
       </section>
+
+      {/* Request Form Modal */}
+      <RequestForm
+        isOpen={isRequestFormOpen}
+        onClose={() => {
+          setIsRequestFormOpen(false);
+          setSelectedTutor(null);
+        }}
+        selectedTutor={selectedTutor}
+      />
     </div>
   );
 };

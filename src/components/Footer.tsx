@@ -60,18 +60,8 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link to="/how-it-works" className="text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
-                  How It Works
-                </Link>
-              </li>
-              <li>
                 <Link to="/instructors" className="text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
                   Find Your Instructor
-                </Link>
-              </li>
-              <li>
-                <Link to="/join-tutor" className="text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors">
-                  Join as Tutor
                 </Link>
               </li>
             </ul>

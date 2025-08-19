@@ -11,9 +11,6 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { name: "About Us", path: "/about" },
     { name: "Services", path: "/services" },
-    { name: "How It Works", path: "/how-it-works" },
-    { name: "Find Your Instructor", path: "/instructors" },
-    { name: "Join as Tutor", path: "/join-tutor" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -36,7 +33,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-10">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -55,17 +52,10 @@ const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button 
-              variant="outline" 
-              size="sm"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-            >
-              <Link to="/instructors">Find Tutor</Link>
-            </Button>
-            <Button 
               size="sm"
               className="gradient-primary text-white hover:opacity-90 transition-opacity"
             >
-              <Link to="/join-tutor">Join as Tutor</Link>
+              <Link to="/instructors">Find Tutor</Link>
             </Button>
           </div>
 
@@ -101,17 +91,10 @@ const Navbar = () => {
               ))}
               <div className="pt-4 space-y-2">
                 <Button 
-                  variant="outline" 
-                  size="sm"
-                  className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-                >
-                  <Link to="/instructors">Find Tutor</Link>
-                </Button>
-                <Button 
                   size="sm"
                   className="w-full gradient-primary text-white hover:opacity-90 transition-opacity"
                 >
-                  <Link to="/join-tutor">Join as Tutor</Link>
+                  <Link to="/instructors">Find Tutor</Link>
                 </Button>
               </div>
             </div>
