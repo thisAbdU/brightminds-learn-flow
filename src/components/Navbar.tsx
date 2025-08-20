@@ -2,16 +2,19 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLocalizationContext();
 
   const navItems = [
-    { name: "Home", path: "/" },
-    { name: "About Us", path: "/about" },
-    { name: "Services", path: "/services" },
-    { name: "Instructors", path: "/instructors" },
+    { name: t("navigation.home"), path: "/" },
+    { name: t("navigation.aboutUs"), path: "/about" },
+    { name: t("navigation.services"), path: "/services" },
+    { name: t("navigation.instructors"), path: "/instructors" },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -28,8 +31,8 @@ const Navbar = () => {
               className="h-10 w-auto"
             />
             <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">Bright Minds</span>
-              <span className="text-xs text-muted-foreground">Tutoring Center</span>
+              <span className="text-xl font-bold text-primary">{t("navbar.brandName")}</span>
+              <span className="text-xs text-muted-foreground">{t("navbar.tagline")}</span>
             </div>
           </Link>
 
@@ -50,18 +53,20 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
+          {/* CTA Button and Language Switcher */}
           <div className="hidden md:flex items-center space-x-4">
+            <LanguageSwitcher />
             <Button 
               size="sm"
               className="gradient-primary text-white hover:opacity-90 transition-opacity"
             >
-              <Link to="/instructors">Find Tutor</Link>
+              <Link to="/instructors">{t("navigation.findTutor")}</Link>
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <div className="md:hidden">
+          <div className="md:hidden flex items-center space-x-2">
+            <LanguageSwitcher />
             <Button
               variant="ghost"
               size="sm"
@@ -95,7 +100,7 @@ const Navbar = () => {
                   size="sm"
                   className="w-full gradient-primary text-white hover:opacity-90 transition-opacity"
                 >
-                  <Link to="/instructors">Find Tutor</Link>
+                  <Link to="/instructors">{t("navigation.findTutor")}</Link>
                 </Button>
               </div>
             </div>

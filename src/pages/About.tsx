@@ -11,8 +11,11 @@ import {
   ArrowRight
 } from "lucide-react";
 import Layout from "@/components/Layout";
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
 const About = () => {
+  const { t } = useLocalizationContext();
+
   return (
     <Layout>
       <div className="min-h-screen">
@@ -21,10 +24,10 @@ const About = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in pt-16">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                About Bright Minds
+                {t("about.hero.title")}
               </h1>
               <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
-                Where learning meets purpose - transforming education through personalized mentorship
+                {t("about.hero.subtitle")}
               </p>
             </div>
           </div>
@@ -36,21 +39,16 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-                Bridging the Educational Gap in{" "}
+                {t("about.introduction.title")}{" "}
                 <span className="gradient-primary bg-clip-text text-transparent">
-                  Ethiopia
+                  {t("about.introduction.country")}
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                In Ethiopia's educational landscape, many students struggle to access quality, 
-                personalized tutoring that meets their individual needs. Traditional educational 
-                systems often fall short of providing the one-on-one attention that students require 
-                to truly excel.
+                {t("about.introduction.paragraph1")}
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Bright Minds Tutoring directly addresses this gap by offering reliable, personalized, 
-                and high-quality academic mentorship from Ethiopia's top-performing medical students 
-                and doctors, combining strong subject knowledge with inspirational mentorship.
+                {t("about.introduction.paragraph2")}
               </p>
             </div>
             <div className="bg-gradient-card rounded-3xl p-8 shadow-card animate-slide-up">
@@ -59,29 +57,29 @@ const About = () => {
                   <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <BookOpen className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-primary mb-2">Expert Tutors</h3>
-                  <p className="text-sm text-muted-foreground">Top medical students & doctors</p>
+                  <h3 className="font-semibold text-primary mb-2">{t("about.features.expertTutors.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("about.features.expertTutors.description")}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-secondary rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-secondary mb-2">Personalized</h3>
-                  <p className="text-sm text-muted-foreground">Tailored learning approach</p>
+                  <h3 className="font-semibold text-secondary mb-2">{t("about.features.personalized.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("about.features.personalized.description")}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-accent rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <Heart className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-accent mb-2">Mentorship</h3>
-                  <p className="text-sm text-muted-foreground">Beyond academic support</p>
+                  <h3 className="font-semibold text-accent mb-2">{t("about.features.mentorship.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("about.features.mentorship.description")}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-success rounded-2xl mx-auto mb-4 flex items-center justify-center">
                     <Award className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-success mb-2">Results</h3>
-                  <p className="text-sm text-muted-foreground">Proven track record</p>
+                  <h3 className="font-semibold text-success mb-2">{t("about.features.results.title")}</h3>
+                  <p className="text-sm text-muted-foreground">{t("about.features.results.description")}</p>
                 </div>
               </div>
             </div>
@@ -99,16 +97,12 @@ const About = () => {
                 <div className="w-16 h-16 bg-primary-lighter rounded-2xl mb-6 flex items-center justify-center">
                   <Eye className="h-8 w-8 text-primary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{t("about.visionMission.vision.title")}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  To become Ethiopia's leading educational platform that transforms students into 
-                  confident, capable, and inspired learners who are equipped to excel in their 
-                  academic pursuits and beyond.
+                  {t("about.visionMission.vision.paragraph1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  We envision a future where every student, regardless of their background or 
-                  learning challenges, has access to world-class tutoring and mentorship that 
-                  unlocks their full potential.
+                  {t("about.visionMission.vision.paragraph2")}
                 </p>
               </CardContent>
             </Card>
@@ -119,29 +113,17 @@ const About = () => {
                 <div className="w-16 h-16 bg-secondary-lighter rounded-2xl mb-6 flex items-center justify-center">
                   <Target className="h-8 w-8 text-secondary" />
                 </div>
-                <h3 className="text-2xl font-bold text-foreground mb-4">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-foreground mb-4">{t("about.visionMission.mission.title")}</h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  To provide exceptional, personalized tutoring services that combine academic 
-                  excellence with mentorship, empowering students to achieve their educational 
-                  goals while building confidence and character.
+                  {t("about.visionMission.mission.paragraph1")}
                 </p>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li className="flex items-start">
-                    <span className="text-secondary mr-2">•</span>
-                    Deliver high-quality, personalized education
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-secondary mr-2">•</span>
-                    Foster academic confidence and excellence
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-secondary mr-2">•</span>
-                    Provide mentorship beyond academics
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-secondary mr-2">•</span>
-                    Support students with diverse learning needs
-                  </li>
+                  {t("about.visionMission.mission.goals").map((goal: string, index: number) => (
+                    <li key={index} className="flex items-start">
+                      <span className="text-secondary mr-2">•</span>
+                      {goal}
+                    </li>
+                  ))}
                 </ul>
               </CardContent>
             </Card>
@@ -154,13 +136,13 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-              Our Core{" "}
+              {t("about.coreDifference.title")}{" "}
               <span className="gradient-primary bg-clip-text text-transparent">
-                Difference
+                {t("about.coreDifference.highlight")}
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              What sets Bright Minds apart in the educational landscape
+              {t("about.coreDifference.subtitle")}
             </p>
           </div>
 
@@ -168,18 +150,13 @@ const About = () => {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
                 <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">
-                  Addressing Ethiopia's Educational Gap
+                  {t("about.coreDifference.mainTitle")}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Bright Minds Tutoring directly addresses the significant educational gap in Ethiopia 
-                  by offering reliable, personalized, and high-quality academic mentorship from the 
-                  country's top-performing medical students and doctors.
+                  {t("about.coreDifference.paragraph1")}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Our unique approach combines strong subject knowledge with inspirational mentorship, 
-                  creating an educational experience that goes beyond traditional tutoring. We don't 
-                  just help students improve their grades—we help them develop the mindset and 
-                  confidence needed for lifelong success.
+                  {t("about.coreDifference.paragraph2")}
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button 
@@ -187,7 +164,7 @@ const About = () => {
                     className="gradient-primary text-white hover:opacity-90 transition-opacity"
                   >
                     <Link to="/instructors" className="flex items-center">
-                      Meet Our Tutors
+                      {t("about.coreDifference.buttons.meetTutors")}
                       <ArrowRight className="ml-2 h-5 w-5" />
                     </Link>
                   </Button>
@@ -196,34 +173,20 @@ const About = () => {
                     size="lg"
                     className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                   >
-                    <Link to="/services">Our Services</Link>
+                    <Link to="/services">{t("about.coreDifference.buttons.ourServices")}</Link>
                   </Button>
                 </div>
               </div>
               <div className="lg:col-span-1">
                 <div className="bg-primary-lighter rounded-2xl p-6">
-                  <h4 className="font-semibold text-primary mb-4">Key Differentiators</h4>
+                  <h4 className="font-semibold text-primary mb-4">{t("about.coreDifference.keyDifferentiators.title")}</h4>
                   <ul className="space-y-3 text-sm">
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      Medical student & doctor tutors
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      Personalized learning approaches
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      Mentorship beyond academics
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      Special needs support
-                    </li>
-                    <li className="flex items-center">
-                      <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
-                      Proven results & methodology
-                    </li>
+                    {t("about.coreDifference.keyDifferentiators.items").map((item: string, index: number) => (
+                      <li key={index} className="flex items-center">
+                        <span className="w-2 h-2 bg-primary rounded-full mr-3"></span>
+                        {item}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>

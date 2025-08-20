@@ -1,0 +1,657 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "close": "Close",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "view": "View",
+    "search": "Search",
+    "filter": "Filter",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous",
+    "yes": "Yes",
+    "no": "No",
+    "required": "Required",
+    "optional": "Optional"
+  },
+  "navigation": {
+    "home": "Home",
+    "aboutUs": "About Us",
+    "services": "Services",
+    "instructors": "Instructors",
+    "findTutor": "Find Tutor",
+    "contactUs": "Contact Us"
+  },
+  "navbar": {
+    "brandName": "Bright Minds",
+    "tagline": "Tutoring Center",
+    "mobileMenu": "Mobile Menu"
+  },
+  "footer": {
+    "motto": "Where learning meets purpose!",
+    "quickLinks": "Quick Links",
+    "ourServices": "Our Services",
+    "contactUs": "Contact Us",
+    "findYourInstructor": "Find Your Instructor",
+    "oneOnOneTutoring": "One-on-One Tutoring",
+    "groupTutoringSessions": "Group Tutoring Sessions",
+    "subjectSpecificSupport": "Subject-Specific Support",
+    "examPreparation": "Exam Preparation",
+    "specialNeedsSupport": "Special Needs Support",
+    "termsAndConditions": "Terms and Conditions",
+    "allRightsReserved": "© 2024 Bright Minds Tutoring Center. All rights reserved.",
+    "tiktok": "TikTok",
+    "telegram": "Telegram"
+  },
+  "home": {
+    "hero": {
+      "title": "Where Learning Meets Purpose",
+      "subtitle": "Expert tutoring from Ethiopia's top medical students and doctors. Personalized education, proven results, and mentorship beyond academics.",
+      "cta": "Find Your Perfect Tutor",
+      "secondaryCta": "Learn More About Us"
+    }
+  },
+  "heroSection": {
+    "selfConfidence": "Self Confidence",
+    "selfConfidenceDescription": "Build confidence through personalized learning",
+    "brightFuture": "A Bright Future",
+    "brightFutureDescription": "Unlock your potential with expert guidance",
+    "excellenceDescription": "Excellence is a way of life",
+    "successDescription": "Success is a journey",
+    "success": "Success",
+    "excellence": "Excellence",
+    "title": {
+      "a": "A good ",
+      "b": "#education",
+      "c": "is always a base of "
+    },
+    "subtitle": "Expert tutoring from Ethiopia's top medical students and doctors. Personalized education, proven results, and mentorship beyond academics.",
+    "primaryCta": "Find Your Perfect Tutor",
+    "secondaryCta": "Learn More About Us",
+    "stats": {
+      "students": "Students",
+      "tutors": "Tutors",
+      "subjects": "Subjects",
+      "successRate": "Success Rate"
+    }
+  },
+  "statsSection": {
+    "studentsTaught": "Students Taught",
+    "retentionRate": "Retention Rate",
+    "referralGrowth": "Referral Growth",
+    "positiveFeedback": "Positive Feedback",
+    "successMetrics": "Success Metrics",
+    "title": "Our Impact in Numbers ",
+    "description": "Real results from our community of dedicated learners and expert tutors",
+    "earlyWins": "Early Wins",
+    "earlyWinsDescription": "These numbers represent real students who have experienced transformation through our personalized tutoring approach. Each statistic tells a story of academic improvement, increased confidence, and educational success.",
+    "stats": {
+      "students": "Students",
+      "tutors": "Tutors",
+      "subjects": "Subjects",
+      "successRate": "Success Rate"
+    }
+  },
+  "servicesSection": {
+    "title": "Our Core Services",
+    "subtitle": "Comprehensive educational support designed to help you achieve your academic goals",
+    "services": {
+      "oneOnOne": {
+        "title": "One-on-One Tutoring",
+        "description": "Personalized learning sessions tailored to your specific needs, learning style, and academic goals.",
+        "features": [
+          "Customized learning plans designed for individual needs",
+          "Flexible scheduling to accommodate your timetable",
+          "Real-time progress tracking and performance analysis",
+          "Direct communication with expert tutors",
+          "Specialized attention to problem areas"
+        ]
+      },
+      "group": {
+        "title": "Group Tutoring Sessions",
+        "description": "Collaborative learning environment with carefully matched peers at similar academic levels.",
+        "features": [
+          "Small group sizes (3-5 students) for optimal attention",
+          "Interactive discussions and peer learning opportunities",
+          "Cost-effective compared to individual sessions",
+          "Healthy academic competition and motivation",
+          "Shared learning experiences and group problem-solving"
+        ]
+      },
+      "subjectSpecific": {
+        "title": "Subject-Specific Support",
+        "description": "Expert guidance across a wide range of academic subjects from qualified specialists.",
+        "features": [
+          "Mathematics, Sciences, Languages, and more",
+          "Curriculum-aligned content and materials",
+          "Subject matter expertise from qualified tutors",
+          "Comprehensive resource materials and practice tests",
+          "Advanced topic exploration and enrichment"
+        ]
+      },
+      "examPrep": {
+        "title": "Exam Preparation",
+        "description": "Comprehensive preparation strategies for standardized tests and important examinations.",
+        "features": [
+          "Proven test-taking strategies and techniques",
+          "Extensive practice materials and mock exams",
+          "Performance analysis and improvement recommendations",
+          "Time management and stress reduction techniques",
+          "Subject-specific exam preparation programs"
+        ]
+      }
+    },
+    "cta": "Get Started",
+    "learnMore": "Learn More"
+  },
+  "uniqueValueSection": {
+    "title": "Why Choose BrightMinds?",
+    "subtitle": "Discover what makes us different from traditional tutoring services",
+    "values": {
+      "expertTutors": {
+        "title": "Expert Tutors",
+        "description": "Our tutors are top-performing medical students and doctors from Ethiopia's leading institutions, ensuring the highest quality of academic guidance."
+      },
+      "personalizedApproach": {
+        "title": "Personalized Approach",
+        "description": "Every student receives a customized learning plan tailored to their unique needs, learning style, and academic goals."
+      },
+      "mentorship": {
+        "title": "Beyond Academics",
+        "description": "We provide not just academic support, but also mentorship, career guidance, and life skills development."
+      },
+      "provenResults": {
+        "title": "Proven Results",
+        "description": "Our students consistently show significant improvement in grades, confidence, and overall academic performance."
+      }
+    }
+  },
+  "instructors": {
+    "hero": {
+      "title": "Find Your Perfect Instructor",
+      "subtitle": "Connect with Ethiopia's top medical students and professionals"
+    },
+    "search": {
+      "placeholder": "Search by subject or instructor name...",
+      "quickFilters": {
+        "mathematics": "Mathematics",
+        "physics": "Physics",
+        "chemistry": "Chemistry",
+        "biology": "Biology",
+        "english": "English"
+      }
+    },
+    "filters": {
+      "title": "Available Instructors",
+      "filterButton": "Filter"
+    },
+    "instructorCard": {
+      "subjects": "Subjects:",
+      "rating": "reviews",
+      "availability": "Available",
+      "experience": "experience",
+      "location": "Addis Ababa",
+      "areaCoverage": "Area Coverage:",
+      "chooseTutor": "Choose Tutor",
+      "viewProfile": "View Profile"
+    },
+    "noResults": {
+      "title": "No instructors found",
+      "description": "Try adjusting your search criteria or browse all instructors"
+    },
+    "cta": {
+      "title": "Can't Find the Right Tutor?",
+      "description": "Contact us and we'll help match you with the perfect instructor for your needs",
+      "contactUs": "Contact Us",
+      "browseSubjects": "Browse All Subjects"
+    },
+    "mockData": {
+      "instructors": [
+        {
+          "name": "Dr. Mehret Teshome",
+          "tagline": "Medical Doctor & Mathematics Specialist",
+          "availability": "Available Today",
+          "experience": "5 years",
+          "location": "Addis Ababa"
+        },
+        {
+          "name": "Dawit Bekele",
+          "tagline": "Medical Student at AAU",
+          "availability": "Available Tomorrow",
+          "experience": "3 years",
+          "location": "Addis Ababa"
+        },
+        {
+          "name": "Hanan Mohammed",
+          "tagline": "Engineering Graduate & Math Expert",
+          "availability": "Available Today",
+          "experience": "4 years",
+          "location": "Addis Ababa"
+        },
+        {
+          "name": "Yohannes Girma",
+          "tagline": "Medical Student & Science Tutor",
+          "availability": "Available This Week",
+          "experience": "2 years",
+          "location": "Addis Ababa"
+        },
+        {
+          "name": "Sara Hailu",
+          "tagline": "Language & Literature Specialist",
+          "availability": "Available Today",
+          "experience": "6 years",
+          "location": "Addis Ababa"
+        },
+        {
+          "name": "Robel Tadesse",
+          "tagline": "Computer Science Graduate",
+          "availability": "Available Tomorrow",
+          "experience": "3 years",
+          "location": "Addis Ababa"
+        }
+      ],
+      "subjects": {
+        "mathematics": "Mathematics",
+        "physics": "Physics",
+        "chemistry": "Chemistry",
+        "biology": "Biology",
+        "english": "English",
+        "literature": "Literature",
+        "history": "History",
+        "computerScience": "Computer Science"
+      },
+      "areas": {
+        "cmc": "CMC",
+        "ayat": "Ayat",
+        "boleMedhaneAlem": "Bole Medhane Alem Cathedral",
+        "gurdShola": "Gurd Shola",
+        "kotebe": "Kotebe",
+        "kazanchis": "Kazanchis",
+        "merkato": "Merkato",
+        "sarbetOldAirport": "Sarbet/Old Airport",
+        "goro": "Goro"
+      },
+      "availability": {
+        "availableToday": "Available Today",
+        "availableTomorrow": "Available Tomorrow",
+        "availableThisWeek": "Available This Week"
+      }
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Our Services",
+      "subtitle": "Comprehensive educational support designed to help you achieve your academic goals"
+    },
+    "mainServices": {
+      "title": "Our Core Offerings",
+      "subtitle": "Choose from our range of specialized tutoring services"
+    },
+    "pricing": {
+      "features": "Features",
+      "benefits": "Benefits",
+      "title": "Pricing & Packages",
+      "subtitle": "Flexible pricing options to suit your learning needs and budget",
+      "payPerSession": {
+        "name": "Pay-Per-Session",
+        "description": "Perfect for occasional tutoring needs",
+        "benefits": [
+          "No long-term commitment required",
+          "Flexibility to book as needed",
+          "Try different tutors and subjects",
+          "Ideal for exam preparation bursts"
+        ],
+        "features": [
+          "Single session booking",
+          "Choice of tutor and subject",
+          "Flexible scheduling",
+          "No monthly commitments"
+        ]
+      },
+      "subscription": {
+        "name": "Subscription Packages",
+        "description": "Best value for regular learning support",
+        "benefits": [
+          "Better value per session",
+          "Consistent learning progression",
+          "Priority booking with preferred tutors",
+          "Comprehensive progress tracking"
+        ],
+        "features": [
+          "Regular weekly/monthly sessions",
+          "Progress monitoring reports",
+          "Dedicated tutor assignment",
+          "Family dashboard access"
+        ]
+      }
+    },
+    "packages": {
+      "chooseThisPackage": "Choose This Package",
+      "title": "Sample Subscription Packages",
+      "subtitle": "Popular packages chosen by our students and families",
+      "weekly": {
+        "name": "Weekly Package",
+        "sessions": "4 sessions per month",
+        "features": [
+          "1 session per week",
+          "Subject consistency",
+          "Progress tracking",
+          "Tutor continuity"
+        ]
+      },
+      "monthly": {
+        "name": "Monthly Premium",
+        "sessions": "8 sessions per month",
+        "features": [
+          "2 sessions per week",
+          "Multi-subject support",
+          "Priority scheduling",
+          "Progress reports",
+          "Family consultations"
+        ],
+        "popular": "Most Popular"
+      }
+    },
+    "cta": {
+      "title": "Ready to Transform Your Learning?",
+      "description": "Join thousands of students who have discovered the power of personalized education",
+      "button": "Find Your Perfect Tutor"
+    }
+  },
+  "about": {
+    "hero": {
+      "title": "About Bright Minds",
+      "subtitle": "Where learning meets purpose - transforming education through personalized mentorship"
+    },
+    "introduction": {
+      "title": "Bridging the Educational Gap in",
+      "country": "Ethiopia",
+      "paragraph1": "In Ethiopia's educational landscape, many students struggle to access quality, personalized tutoring that meets their individual needs. Traditional educational systems often fall short of providing the one-on-one attention that students require to truly excel.",
+      "paragraph2": "Bright Minds Tutoring directly addresses this gap by offering reliable, personalized, and high-quality academic mentorship from Ethiopia's top-performing medical students and doctors, combining strong subject knowledge with inspirational mentorship."
+    },
+    "features": {
+      "expertTutors": {
+        "title": "Expert Tutors",
+        "description": "Top medical students & doctors"
+      },
+      "personalized": {
+        "title": "Personalized",
+        "description": "Tailored learning approach"
+      },
+      "mentorship": {
+        "title": "Mentorship",
+        "description": "Beyond academic support"
+      },
+      "results": {
+        "title": "Results",
+        "description": "Proven track record"
+      }
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Our Vision",
+        "paragraph1": "To become Ethiopia's leading educational platform that transforms students into confident, capable, and inspired learners who are equipped to excel in their academic pursuits and beyond.",
+        "paragraph2": "We envision a future where every student, regardless of their background or learning challenges, has access to world-class tutoring and mentorship that unlocks their full potential."
+      },
+      "mission": {
+        "title": "Our Mission",
+        "paragraph1": "To provide exceptional, personalized tutoring services that combine academic excellence with mentorship, empowering students to achieve their educational goals while building confidence and character.",
+        "goals": [
+          "Deliver high-quality, personalized education",
+          "Foster academic confidence and excellence",
+          "Provide mentorship beyond academics",
+          "Support students with diverse learning needs"
+        ]
+      }
+    },
+    "coreDifference": {
+      "title": "Our Core",
+      "highlight": "Difference",
+      "subtitle": "What sets Bright Minds apart in the educational landscape",
+      "mainTitle": "Addressing Ethiopia's Educational Gap",
+      "paragraph1": "Bright Minds Tutoring directly addresses the significant educational gap in Ethiopia by offering reliable, personalized, and high-quality academic mentorship from the country's top-performing medical students and doctors.",
+      "paragraph2": "Our unique approach combines strong subject knowledge with inspirational mentorship, creating an educational experience that goes beyond traditional tutoring. We don't just help students improve their grades—we help them develop the mindset and confidence needed for lifelong success.",
+      "buttons": {
+        "meetTutors": "Meet Our Tutors",
+        "ourServices": "Our Services"
+      },
+      "keyDifferentiators": {
+        "title": "Key Differentiators",
+        "items": [
+          "Medical student & doctor tutors",
+          "Personalized learning approaches",
+          "Mentorship beyond academics",
+          "Special needs support",
+          "Proven results & methodology"
+        ]
+      }
+    }
+  },
+  "terms": {
+    "hero": {
+      "title": "Terms and Conditions",
+      "subtitle": "Understanding our service agreement and policies"
+    },
+    "header": {
+      "companyName": "BrightMinds Tutoring Center",
+      "effectiveDate": "Effective Date: September 7, 2024",
+      "lastRevised": "Last Revised: August 2, 2025"
+    },
+    "introduction": "These Terms and Conditions (\"Terms\") form the agreement between BrightMinds Tutoring Center (\"BrightMinds,\" \"we,\" \"our\"), the Tutors who provide academic support through our platform, and the Clients/Families who use our services. By registering with BrightMinds, booking lessons, or providing tutoring, you agree to follow these Terms.",
+    "sections": {
+      "purpose": {
+        "title": "1. Purpose of the Service",
+        "content": "BrightMinds Tutoring Center connects families with qualified tutors for academic support. We organize scheduling, coordination, and provide general oversight. BrightMinds is not a school, an employer of tutors, or responsible for guaranteeing student results. Our role is to facilitate learning partnerships between Tutors and Clients."
+      },
+      "eligibility": {
+        "title": "2. Eligibility",
+        "points": [
+          "Tutors must go through BrightMinds' approval process, which includes screening and professional standards.",
+          "Clients must be 18 years or older and legally able to enter contracts under Ethiopian law.",
+          "Parents/guardians are responsible for ensuring a safe learning space and proper supervision when the student is a minor.",
+          "Improper or unlawful use of our services may result in suspension or termination."
+        ]
+      },
+      "independentRelationship": {
+        "title": "3. Independent Relationship",
+        "description": "Tutors working through BrightMinds are independent providers, not employees. This means:",
+        "points": [
+          "Tutors are not entitled to employee benefits or protections under Ethiopian labor law.",
+          "Clients may not treat Tutors as household staff or employees.",
+          "Tutors may not represent themselves as official agents of BrightMinds outside of tutoring arrangements."
+        ]
+      },
+      "tutorResponsibilities": {
+        "title": "4. Responsibilities of Tutors",
+        "agreeTo": {
+          "title": "Tutors agree to:",
+          "points": [
+            "Arrive prepared and on time.",
+            "Deliver sessions professionally.",
+            "Maintain privacy and respect.",
+            "Follow BrightMinds' ethical standards."
+          ]
+        },
+        "mustNot": {
+          "title": "Tutors must not:",
+          "points": [
+            "Request off-platform payments.",
+            "Share personal contact information for non-tutoring purposes.",
+            "Perform non-academic tasks (such as errands or babysitting)."
+          ]
+        }
+      },
+      "clientResponsibilities": {
+        "title": "5. Responsibilities of Clients",
+        "description": "Clients agree to:",
+        "points": [
+          "Provide a safe and quiet study environment.",
+          "Respect the boundaries of tutors' roles.",
+          "Make timely payments for sessions.",
+          "Communicate concerns directly with BrightMinds, not privately with Tutors."
+        ]
+      },
+      "payments": {
+        "title": "6. Payments",
+        "points": [
+          "Payments should be made through BrightMinds unless otherwise approved.",
+          "Any payment made directly to a Tutor must be reported to BrightMinds for record-keeping.",
+          "BrightMinds may charge service or coordination fees.",
+          "Refunds and adjustments are handled at BrightMinds' discretion."
+        ]
+      },
+      "learningOutcomes": {
+        "title": "7. Learning Outcomes",
+        "content": "Tutoring aims to support academic growth, but BrightMinds cannot promise specific grades, results, or guaranteed improvement. Learning depends on the combined effort of the student, family, and tutor."
+      },
+      "refundPolicy": {
+        "title": "8. Refund Policy",
+        "content": "Refunds are reviewed individually. Prepaid lessons may be refunded, credited, or forfeited depending on the situation. Repeated cancellations or contract violations may affect refund eligibility."
+      },
+      "cancellations": {
+        "title": "9. Cancellations & Rescheduling",
+        "points": [
+          "Tutors and Clients may reschedule lessons if both agree.",
+          "Repeated cancellations or last-minute changes should be reported to BrightMinds for review or reassignment."
+        ]
+      },
+      "limitationOfLiability": {
+        "title": "10. Limitation of Liability",
+        "description": "BrightMinds is not responsible for damages, losses, or conflicts that occur during tutoring sessions. By using our services, Tutors and Clients agree to release BrightMinds from claims related to:",
+        "points": [
+          "Misconduct or negligence by either party,",
+          "Property damage or privacy issues,",
+          "Emotional or physical harm,",
+          "Student academic performance."
+        ]
+      },
+      "privacy": {
+        "title": "11. Privacy and Confidentiality",
+        "points": [
+          "Tutors must keep student information confidential.",
+          "Clients may not misuse Tutor details (such as photos or contact information).",
+          "BrightMinds only collects data necessary for service delivery and will not share it without consent, except when legally required."
+        ]
+      },
+      "termination": {
+        "title": "12. Termination",
+        "description": "BrightMinds may suspend or end services for:",
+        "points": [
+          "Violation of these Terms,",
+          "Nonpayment,",
+          "Safety concerns or misconduct."
+        ],
+        "additional": "Clients and Tutors may also end their engagement by notifying BrightMinds."
+      },
+      "sharedInformation": {
+        "title": "13. Use of Shared Information",
+        "content": "Information shared between Tutors and Clients should be used only for educational purposes. Personal information must be protected and not shared with third parties without consent."
+      }
+    },
+    "footer": {
+      "contact": "For questions about these Terms and Conditions, please contact us through our platform.",
+      "lastUpdated": "Last Updated: August 2, 2025"
+    }
+  },
+  "requestForm": {
+    "titles": {
+      "chooseTutor": "Choose Tutor Request",
+      "contactUs": "Contact Us Request"
+    },
+    "selectedTutor": {
+      "title": "Selected Tutor:",
+      "subjects": "Subjects:",
+      "areaCoverage": "Area Coverage:"
+    },
+    "form": {
+      "parentFullName": {
+        "label": "Parent Full Name *",
+        "placeholder": "Enter parent's full name"
+      },
+      "parentPhoneNumber": {
+        "label": "Parent Phone Number *",
+        "placeholder": "Enter phone number"
+      },
+      "email": {
+        "label": "Email Address *",
+        "placeholder": "Enter email address"
+      },
+      "homeAddress": {
+        "label": "Home Address *",
+        "placeholder": "Enter specific location"
+      },
+      "gradeLevel": {
+        "label": "Grade Level *",
+        "placeholder": "Select grade"
+      },
+      "hoursPerDay": {
+        "label": "Hours per Day *",
+        "placeholder": "Select hours"
+      },
+      "daysPerWeek": {
+        "label": "Days per Week *",
+        "placeholder": "Select days"
+      },
+      "specialNeeds": {
+        "label": "Special Needs (Optional)",
+        "placeholder": "Describe any special requirements or needs..."
+      }
+    },
+    "gradeLevels": [
+      "KG", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6",
+      "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"
+    ],
+    "hoursOptions": ["1 hour", "2 hours", "3 hours", "4 hours", "5+ hours"],
+    "daysOptions": ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "7 days"],
+    "termsAndConditions": {
+      "label": "I agree to the Terms and Conditions of BrightMinds Tutoring Center *",
+      "description": "By checking this box, you acknowledge that you have read, understood, and agree to be bound by our terms and conditions.",
+      "linkText": "Terms and Conditions"
+    },
+    "validation": {
+      "title": "Please fix the following errors:",
+      "requiredFields": "is required",
+      "termsAgreement": "You must agree to the Terms and Conditions"
+    },
+    "buttons": {
+      "cancel": "Cancel",
+      "submitRequest": "Submit Request",
+      "sendMessage": "Send Message",
+      "sending": "Sending...",
+      "sentSuccessfully": "Sent Successfully!"
+    },
+    "errors": {
+      "failedToSend": "Failed to send message. Please try again."
+    }
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Oops! Page not found",
+    "returnHome": "Return to Home"
+  },
+  "telegram": {
+    "newRequest": "🎓 New Tutoring Request",
+    "selectedTutor": "Selected Tutor:",
+    "generalContact": "General Contact Request",
+    "parentInformation": "Parent Information:",
+    "fullName": "Full Name:",
+    "phone": "Phone:",
+    "email": "Email:",
+    "locationSchedule": "Location & Schedule:",
+    "homeAddress": "Home Address:",
+    "gradeLevel": "Grade Level:",
+    "hoursPerDay": "Hours per Day:",
+    "daysPerWeek": "Days per Week:",
+    "specialNeeds": "Special Needs:",
+    "tutorDetails": "Tutor Details:",
+    "subjects": "Subjects:",
+    "areaCoverage": "Area Coverage:",
+    "submittedAt": "Submitted at:"
+  }
+} 

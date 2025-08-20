@@ -1,0 +1,658 @@
+{
+    "common": {
+      "loading": "Fe'amaa jira...",
+      "error": "Dogoggora",
+      "success": "Milkaa'ina",
+      "cancel": "Haqi",
+      "submit": "Galchi",
+      "close": "Cufi",
+      "save": "Olkaa'i",
+      "edit": "Fooyyessi",
+      "delete": "Balleessi",
+      "view": "Ilaali",
+      "search": "Barbaadi",
+      "filter": "Calali",
+      "back": "Deebi'i",
+      "next": "Itti Aansu",
+      "previous": "Isa Darbe",
+      "yes": "Eeyyee",
+      "no": "Lakkii",
+      "required": "Barbaachisaadha",
+      "optional": "Filannoodha"
+    },
+    "navigation": {
+      "home": "Fuula Jalqabaa",
+      "aboutUs": "Waa'ee Keenya",
+      "services": "Tajaajilawwan",
+      "instructors": "Barsiisota",
+      "findTutor": "Barsiisaa Barbaadi",
+      "contactUs": "Nu Qunnami"
+    },
+    "navbar": {
+      "brandName": "Sammuuwwan Ifoo",
+      "tagline": "Giddugala Gargaarsa Barnootaa",
+      "mobileMenu": "Baafata Moobayilii"
+    },
+    "footer": {
+      "motto": "Iddoo barumsi kaayyoo wajjin itti walargu!",
+      "quickLinks": "Qabsiistota Ariifachiisoo",
+      "ourServices": "Tajaajilawwan Keenya",
+      "contactUs": "Nu Qunnami",
+      "findYourInstructor": "Barsiisaa Keessan Barbaadaa",
+      "oneOnOneTutoring": "Gargaarsa Barnootaa Kophaa Kophaa",
+      "groupTutoringSessions": "Gargaarsa Barnootaa Gareen",
+      "subjectSpecificSupport": "Deeggarsa Barnootaa Addaa",
+      "examPreparation": "Qophii Qormaataa",
+      "specialNeedsSupport": "Deeggarsa Fedhii Addaa",
+      "termsAndConditions": "Seerotaafi Haalawwan",
+      "allRightsReserved": "© 2024 Giddugala Gargaarsa Barnootaa Sammuuwwan Ifoo. Mirgi hundi seeraan eegamaadha.",
+      "tiktok": "TikTok",
+      "telegram": "Telegram"
+    },
+    "home": {
+      "hero": {
+        "title": "Iddoo Barumsi Kaayyoo Waliin Itti Wal Qabatu",
+        "subtitle": "Gargaarsa barnootaa ogummaa, barattoota fayyaa fi ogeeyyii fayyaa Itoophiyaa beekamoo irraa kennamu. Barnoota dhuunfaatti mijaa'e, bu'aa mirkanaa'e, fi gorsa barnootaan alaa.",
+        "cta": "Barsiisaa Siif Ta'u Barbaadi",
+        "secondaryCta": "Waa'ee Keenya Caalaatti Baruuf"
+      }
+    },
+    "heroSection": {
+      "selfConfidence": "Ofitti Amanamummaa",
+      "selfConfidenceDescription": "Barnoota dhuunfatti mijaayeen ofitti amanamummaa keessan ijaaraa",
+      "brightFuture": "Fuuldura Ifaa",
+      "brightFutureDescription": "Qajeelfama ogeessaatiin dandeettii keessan saaqaa",
+      "excellenceDescription": "Ga'umsa Olaanaan akkaataa jireenyaati",
+      "successDescription": "Milkaa'inni imala dha",
+      "success": "Milkaa'ina",
+      "excellence": "Ga'umsa Olaanaa",
+      "title": {
+        "a": "Barnoonni ",
+        "b": "#gaariin",
+        "c": " yeroo hunda bu'uura "
+      },
+      "subtitle": "Gargaarsa barnootaa ogummaa, barattoota fayyaa fi ogeeyyii fayyaa Itoophiyaa beekamoo irraa kennamu. Barnoota dhuunfaatti mijaa'e, bu'aa mirkanaa'e, fi gorsa barnootaan alaa.",
+      "primaryCta": "Barsiisaa Siif Ta'u Barbaadi",
+      "secondaryCta": "Waa'ee Keenya Caalaatti Baruuf",
+      "stats": {
+        "students": "Barattoota",
+        "tutors": "Barsiisota",
+        "subjects": "Gosa Barnootaa",
+        "successRate": "Sadarkaa Milkaa'inaa"
+      }
+    },
+    "statsSection": {
+        "studentsTaught": "Barattoota Barsiifne",
+        "retentionRate": "Sadarkaa Itti Fufiinsaa",
+        "referralGrowth": "Guddina Akeekkumsaa",
+        "positiveFeedback": "Yaada Gaarii",
+        "successMetrics": "Safartuulee Milkaa'inaa",
+        "title": "Dhiibbaa Keenya Lakkoofsaan ",
+        "description": "Bu'aawwan dhugaa kan hawaasa barattoota kutatoofi barsiisota ogeeyyii keenya irraa argaman",
+        "earlyWins": "Milkaa'inoota Jalqabaa",
+        "earlyWinsDescription": "Lakkoofsonni kun barattoota dhugaa kanneen akkaataa gargaarsa barnootaa keenya kan dhuunfatti mijaayeen jijjiirama argan bakka bu'u. Istaatistiiksiin hundi seenaa fooyya'iinsa barnootaa, ofitti amanamummaa dabalee, fi milkaa'ina barnootaa hima.",
+        "subtitle": "Yeroo tokkotti barataa tokko jijjiiruun barnoota fooyyessuu",
+        "stats": {
+            "students": "Barattoota",
+            "tutors": "Barsiisota",
+            "subjects": "Gosa Barnootaa",
+            "successRate": "Sadarkaa Milkaa'inaa"
+        }
+    },
+    "servicesSection": {
+      "title": "Tajaajilawwan Keenya Bu'uuraa",
+      "subtitle": "Deeggarsa barnootaa guutuu kan kaayyoo barnootaa keessan akka milkeessitan isin gargaaruuf qophaa'e",
+      "services": {
+        "oneOnOne": {
+          "title": "Gargaarsa Barnootaa Kophaa Kophaa",
+          "description": "Yeroo barnootaa kan dhuunfaatti fedhii, akkaataa barannaa, fi galma barnootaa keessan addaa irratti hundaa'uun qophaa'e.",
+          "features": [
+            "Karoora barnootaa kan fedhii dhuunfaatiif mijaa'e",
+            "Sagantaa yeroo kan sagantaa keessan waliin walsimu",
+            "Hordoffii adeemsaafi xiinxala raawwii yeroo qabatamaa",
+            "Barsiisota ogummaa qaban waliin qunnamtii kallattii",
+            "Xiyyeeffannoo addaa bakka rakkoon jiruuf"
+          ]
+        },
+        "group": {
+          "title": "Gargaarsa Barnootaa Gareen",
+          "description": "Naannoo barnootaa hirmaannaa qabu kan hiriyoota sadarkaa barnootaa walfakkaataa irra jiran waliin.",
+          "features": [
+            "Gareewwan xixiqqoo (barattoota 3-5) xiyyeeffannoo gaariif",
+            "Mariifi carraawwan barumsaa hiriyoota gidduutti taasifamu",
+            "Gargaarsa dhuunfaa wajjin wal bira qabamee yoo ilaalamu gatii madaalawaa",
+            "Dorgommii barnootaa fayya qabeessaafi kaka'umsa",
+            "Muuxannoo barumsaa waliinii fi furmaata rakkoo gareen"
+          ]
+        },
+        "subjectSpecific": {
+          "title": "Deeggarsa Barnootaa Addaa",
+          "description": "Qajeelfama ogummaa ogeeyyii beekumsa qaban irraa gosa barnootaa adda addaa irratti.",
+          "features": [
+            "Herrega, Saayinsii, Afaanotaa, fi kanneen biroo",
+            "Qabiyyee fi meeshaalee sirna barnootaa wajjin walsiman",
+            "Ogummaa gosa barnootichaa barsiisota gahumsa qaban irraa",
+            "Meeshaalee deeggarsaa guutuu fi qormaata shaakalaa",
+            "Qorannoo mata duree gadi fagoo fi gabbisuu"
+          ]
+        },
+        "examPrep": {
+          "title": "Qophii Qormaataa",
+          "description": "Tarsiimoo qophii guutuu qormaata sadarkeessaa fi qormaatawwan barbaachisoo biroof.",
+          "features": [
+            "Tarsiimoo fi malawwan qormaata fudhachuu mirkanaa'an",
+            "Meeshaalee shaakalaa bal'aa fi qormaata fakkeessii",
+            "Xiinxala raawwii fi yaada fooyya'iinsaa",
+            "Tooftaalee bulchiinsa yeroo fi hir'ina dhiphinaa",
+            "Sagantaalee qophii qormaataa gosa barnootaa addaatiin"
+          ]
+        }
+      },
+      "cta": "Jalqabi",
+      "learnMore": "Dabalata Baruuf"
+    },
+    "uniqueValueSection": {
+      "title": "Maaliif Sammuuwwan Ifoo Filattu?",
+      "subtitle": "Waan tajaajila gargaarsa barnootaa aadaa irraa adda nu taasisu bari",
+      "values": {
+        "expertTutors": {
+          "title": "Barsiisota Ogummaa Qaban",
+          "description": "Barsiisoonni keenya barattoota fayyaa fi ogeeyyii fayyaa dhaabbilee barnootaa Itoophiyaa beekamoo keessaa qabxii olaanaa galmeessisan waan ta'aniif, qulqullina qajeelfama barnootaa olaanaa ni mirkaneessu."
+        },
+        "personalizedApproach": {
+          "title": "Akkaataa Dhuunfatti Mijaaye",
+          "description": "Barataan hundi karoora barumsaa kan fedhii, akkaataa barannaa, fi galma barnootaa isaaniitiif mijaa'e argata."
+        },
+        "mentorship": {
+          "title": "Barnootaan Ol",
+          "description": "Deeggarsa barnootaa qofa osoo hin taane, gorsa, qajeelfama ogummaa, fi dagaagina dandeettii jireenyaa ni kennina."
+        },
+        "provenResults": {
+          "title": "Bu'aa Mirkanaa'e",
+          "description": "Barattoonni keenya yeroo hunda qabxii, ofitti amanamummaa, fi raawwii barnootaa waliigalaa irratti fooyya'iinsa guddaa agarsiisu."
+        }
+      }
+    },
+    "instructors": {
+      "hero": {
+        "title": "Barsiisaa Siif Ta'u Argadhu",
+        "subtitle": "Barattoota fayyaa fi ogeeyyii Itoophiyaa beekamoo wajjin wal qunnami"
+      },
+      "search": {
+        "placeholder": "Gosa barnootaa yookiin maqaa barsiisaatiin barbaadi...",
+        "quickFilters": {
+          "mathematics": "Herrega",
+          "physics": "Fiiziksii",
+          "chemistry": "Keemistirii",
+          "biology": "Baayoloojii",
+          "english": "Afaan Ingiliffaa"
+        }
+      },
+      "filters": {
+        "title": "Barsiisota Argaman",
+        "filterButton": "Calali"
+      },
+      "instructorCard": {
+        "subjects": "Gosa Barnootaa:",
+        "rating": "xiinxalawwan",
+        "availability": "Ni Argama",
+        "experience": "muuxannoo",
+        "location": "Finfinnee",
+        "areaCoverage": "Naannoo Tajaajilaa:",
+        "chooseTutor": "Barsiisaa Filadhu",
+        "viewProfile": "Profaayilii Ilaali"
+      },
+      "noResults": {
+        "title": "Barsiisaan hin argamne",
+        "description": "Ulaagaa barbaacha kee sirreessuu yaali yookiin barsiisota hunda ilaali"
+      },
+      "cta": {
+        "title": "Barsiisaa Sirrii Argachuu Dadhabdee?",
+        "description": "Nu qunnami, barsiisaa fedhii keetiif sirrii ta'e akka argattu si gargaarra",
+        "contactUs": "Nu Qunnami",
+        "browseSubjects": "Gosa Barnootaa Hunda Ilaali"
+      },
+      "mockData": {
+        "instructors": [
+          {
+            "name": "Dr. Mehret Teshome",
+            "tagline": "Ogeessa Fayyaa (Dooktara) fi Hayyuu Herregaa",
+            "availability": "Har'a ni argama",
+            "experience": "Waggaa 5",
+            "location": "Finfinnee"
+          },
+          {
+            "name": "Dawit Bekele",
+            "tagline": "Barataa Fayyaa Yuunivarsiitii Finfinnee",
+            "availability": "Boru ni argama",
+            "experience": "Waggaa 3",
+            "location": "Finfinnee"
+          },
+          {
+            "name": "Hanan Mohammed",
+            "tagline": "Eebbifamtuu Injinariingii fi Ogeettii Herregaa",
+            "availability": "Har'a ni argama",
+            "experience": "Waggaa 4",
+            "location": "Finfinnee"
+          },
+          {
+            "name": "Yohannes Girma",
+            "tagline": "Barataa Fayyaa fi Barsiisaa Saayinsii",
+            "availability": "Torban kana ni argama",
+            "experience": "Waggaa 2",
+            "location": "Finfinnee"
+          },
+          {
+            "name": "Sara Hailu",
+            "tagline": "Ogeettii Afaanii fi Ogbarruu",
+            "availability": "Har'a ni argama",
+            "experience": "Waggaa 6",
+            "location": "Finfinnee"
+          },
+          {
+            "name": "Robel Tadesse",
+            "tagline": "Eebbifamaa Saayinsii Kompiitaraa",
+            "availability": "Boru ni argama",
+            "experience": "Waggaa 3",
+            "location": "Finfinnee"
+          }
+        ],
+        "subjects": {
+          "mathematics": "Herrega",
+          "physics": "Fiiziksii",
+          "chemistry": "Keemistirii",
+          "biology": "Baayoloojii",
+          "english": "Afaan Ingiliffaa",
+          "literature": "Ogbarruu",
+          "history": "Seenaa",
+          "computerScience": "Saayinsii Kompiitaraa"
+        },
+        "areas": {
+          "cmc": "CMC",
+          "ayat": "Ayat",
+          "boleMedhaneAlem": "Boolee Madhaane'aalam",
+          "gurdShola": "Gurd Shola",
+          "kotebe": "Kotebe",
+          "kazanchis": "Kazanchis",
+          "merkato": "Merkato",
+          "sarbetOldAirport": "Saarbeet/Buufata Xiyyaaraa Moofaa",
+          "goro": "Goro"
+        },
+        "availability": {
+          "availableToday": "Har'a ni argama",
+          "availableTomorrow": "Boru ni argama",
+          "availableThisWeek": "Torban kana ni argama"
+        }
+      }
+    },
+    "services": {
+      "hero": {
+        "title": "Tajaajilawwan Keenya",
+        "subtitle": "Deeggarsa barnootaa guutuu kan kaayyoo barnootaa keessan akka milkeessitan isin gargaaruuf qophaa'e"
+      },
+      "mainServices": {
+        "title": "Dhiyeessiiwwan Keenya Gurguddoo",
+        "subtitle": "Tajaajilawwan gargaarsa barnootaa addaa keenya keessaa filadhu"
+      },
+      "pricing": {
+        "title": "Gatiifi Paakeejiiwwan",
+        "subtitle": "Filannoowwan gatii kan fedhii barumsaa fi baajata keetiif mijatan",
+        "benefits": "faayidaalee",
+        "features": "tajaajila",
+        "payPerSession": {
+          "name": "Kaffaltii Yeroo Tokkoo",
+          "description": "Fedhii gargaarsa barnootaa yeroo yerootti barbaadamuuf mijataadha",
+          "benefits": [
+            "Dirqama yeroo dheeraa hin barbaadu",
+            "Akka barbaachisummaa isaatti qabachuuf salphaadha",
+            "Barsiisotaafi gosa barnootaa adda addaa yaaluuf",
+            "Qophii qormaataatiif baayyee mijataadha"
+          ],
+          "features": [
+            "Qabannaa yeroo tokkoo",
+            "Filannoo barsiisaa fi gosa barnootaa",
+            "Sagantaa yeroo salphaatti jijjiiramu",
+            "Dirqama ji'aa hin qabu"
+          ]
+        },
+        "subscription": {
+          "name": "Paakeejiiwwan Galmee",
+          "description": "Deeggarsa barumsaa yeroo hundaa argachuuf gatii gaarii qaba",
+          "benefits": [
+            "Gatii madaalawaa yeroo tokkoof",
+            "Adeemsa barumsaa walitti fufiinsa qabu",
+            "Barsiisota filataman waliin dursee qabachuu",
+            "Hordoffii adeemsaa guutuu"
+          ],
+          "features": [
+            "Yeroo barumsaa torbanii/ji'aa idilee",
+            "Gabaasa hordoffii adeemsaa",
+            "Ramaddii barsiisaa dhaabbataa",
+            "Daashboordii maatii fayyadamuu"
+          ]
+        }
+      },
+      "packages": {
+        "title": "Paakeejiiwwan Galmee Fakkeenya",
+        "subtitle": "Paakeejiiwwan barattootaafi maatiiwwan keenyaan jaallataman",
+        "chooseThisPackage": "PaakeejiiKana filadhu",
+        "weekly": {
+          "name": "Paakeejii Torbanii",
+          "sessions": "Ji'atti yeroo 4",
+          "features": [
+            "Torbaniin yeroo 1",
+            "Walitti fufiinsa gosa barnootaa",
+            "Hordoffii adeemsaa",
+            "Itti fufiinsa barsiisaa"
+          ]
+        },
+        "monthly": {
+          "name": "Piriimiyamii Ji'aa",
+          "sessions": "Ji'atti yeroo 8",
+          "features": [
+            "Torbaniin yeroo 2",
+            "Deeggarsa gosa barnootaa hedduu",
+            "Sagantaa qabachuu irratti dursa argachuu",
+            "Gabaasa adeemsaa",
+            "Gorsa maatii"
+          ],
+          "popular": "Baayyee Jaallatamaa"
+        }
+      },
+      "cta": {
+        "title": "Barumsa Keessan Jijjiiruuf Qophiidhaa?",
+        "description": "Barattoota kumaatamaan lakkaa'aman kan humna barnoota dhuunfaa argatanitti makami",
+        "button": "Barsiisaa Siif Ta'u Barbaadi"
+      }
+    },
+    "about": {
+    "hero": {
+      "title": "Waa'ee Sammuuwwan Ifoo",
+      "subtitle": "Iddoo barumsi kaayyoo wajjin itti walargu - gorsa dhuunfaatiin barnoota jijjiiruu"
+    },
+    "introduction": {
+      "title": "Hangaara Barnootaa ... Keessaa Guutuu",
+      "country": "Itoophiyaa",
+      "paragraph1": "Naannoo barnootaa Itoophiyaa keessatti, barattoonni hedduun gargaarsa barnootaa qulqullina qabu, kan dhuunfaatti mijaayee fi fedhii isaanii guutu argachuuf ni rakkatu. Sirnoonni barnootaa aadaa yeroo baayyee xiyyeeffannoo dhuunfaa barattoonni dhugumaan milkaa'uuf barbaadan kennuu irraa duubatti hafu.",
+      "paragraph2": "Gargaarsi Barnootaa Sammuuwwan Ifoo, gorsa barnootaa amansiisaa, dhuunfaatti mijaayeefi qulqullina olaanaa qabu barattoota fayyaafi ogeeyyii fayyaa Itoophiyaa qabxii olaanaa galmeessisan irraa dhiyeessuun, beekumsa gosa barnootaa cimaa gorsa kaka'umsa qabu waliin walqabsiisuun hangaara kana kallattiin guuta."
+    },
+    "features": {
+      "expertTutors": {
+        "title": "Barsiisota Ogummaa Qaban",
+        "description": "Barattoota fayyaa & ogeeyyii fayyaa ciccimoo"
+      },
+      "personalized": {
+        "title": "Kan Dhuunfatti Mijaaye",
+        "description": "Akkaataa barumsaa addatti qophaa'e"
+      },
+      "mentorship": {
+        "title": "Gorsa",
+        "description": "Deeggarsa barnootaan ol"
+      },
+      "results": {
+        "title": "Bu'aawwan",
+        "description": "Seenaa hojii mirkanaa'e"
+      }
+    },
+    "visionMission": {
+      "vision": {
+        "title": "Mul'ata Keenya",
+        "paragraph1": "Barattoota ofitti amanamummaa qaban, dandeettii qaban, fi kaka'umsa qaban kanneen barnoota isaaniifi sanaan olitti milkaa'uuf qophaa'an horachuun, sadarkaa Itoophiyaatti dhaabbata barnootaa adda duree ta'uu.",
+        "paragraph2": "Barataan kamiyyuu, haala maatii yookiin rakkoo barumsaa isaan mudatu osoo ilaalin, gargaarsa barnootaafi gorsa sadarkaa addunyaa qabu kan dandeettii isaanii guutuu fayyadamuuf isaan dandeessisu akka argatan hawwina."
+      },
+      "mission": {
+        "title": "Ergama Keenya",
+        "paragraph1": "Tajaajila gargaarsa barnootaa adda ta'eefi dhuunfaatti mijaaye, milkaa'ina barnootaa gorsa waliin walqabsiisuun dhiyeessuu, kanaanis barattoonni kaayyoo barnootaa isaanii akka milkeessan, ofitti amanamummaafi amala gaarii akka cimsatan gargaaruu.",
+        "goals": [
+          "Barnoota qulqullina olaanaa qabuufi dhuunfaatti mijaaye kennuu",
+          "Ofitti amanamummaa barnootaafi milkaa'ina guddisuu",
+          "Gorsa barnootaan alaa kennuu",
+          "Barattoota fedhii barumsaa adda addaa qaban deeggaruu"
+        ]
+      }
+    },
+    "coreDifference": {
+      "title": "Bu'uura Keenya",
+      "highlight": "Garaagarummaa",
+      "subtitle": "Maaltu Sammuuwwan Ifoo naannoo barnootaa keessatti adda taasisa?",
+      "mainTitle": "Hangaara Barnootaa Itoophiyaa Guutuu",
+      "paragraph1": "Gargaarsi Barnootaa Sammuuwwan Ifoo, gargaarsa barnootaa amansiisaa, dhuunfaatti mijaayee, fi qulqullina olaanaa qabu barattoota fayyaafi ogeeyyii fayyaa biyyattii qabxii olaanaa galmeessisan irraa dhiyeessuun hangaara barnootaa Itoophiyaa keessaa guuta.",
+      "paragraph2": "Akkaataan adda ta'e keenya beekumsa gosa barnootaa cimaa gorsa kaka'umsa qabu waliin walqabsiisuun muuxannoo barnootaa kan gargaarsa aadaa irra darbe uuma. Nuti barattoonni qabxii isaanii akka fooyyessan qofa osoo hin taane, ilaalchaafi ofitti amanamummaa milkaa'ina jireenya guutuuf barbaachisu akka horatan isaan gargaarra.",
+      "buttons": {
+        "meetTutors": "Barsiisota Keenya Waliin Wal Baraa",
+        "ourServices": "Tajaajilawwan Keenya"
+      },
+      "keyDifferentiators": {
+        "title": "Garaagarummaa Ijoo Keenya",
+        "items": [
+          "Barsiisota barattoota fayyaafi ogeeyyii fayyaa",
+          "Akkaataa barumsaa dhuunfatti mijaaye",
+          "Gorsa barnootaan alaa",
+          "Deeggarsa fedhii addaa",
+          "Bu'aawwanfi mala mirkanaa'e"
+        ]
+      }
+    }
+  },
+    "terms": {
+      "hero": {
+        "title": "Seerotaafi Haalawwan",
+        "subtitle": "Waliigaltee tajaajilaafi imaammata keenya hubachuu"
+      },
+      "header": {
+        "companyName": "Giddugala Gargaarsa Barnootaa Sammuuwwan Ifoo",
+        "effectiveDate": "Guyyaa Hojirra Ooluu: Fulbaana 7, 2024",
+        "lastRevised": "Yeroo Dhumaaf Fooyya'e: Hagayya 2, 2025"
+      },
+      "introduction": "Seerotniifi Haalawwan (\"Seerota\") kun waliigaltee Giddugala Gargaarsa Barnootaa Sammuuwwan Ifoo (\"Sammuuwwan Ifoo,\" \"nuti,\" \"keenya\"), Barsiisota karaa keenya deeggarsa barnootaa kennanii, fi Maamiltoota/Maatiiwwan tajaajila keenya fayyadaman gidduutti uuma. Sammuuwwan Ifoo irratti galmaa'uun, barumsa qabachuun, yookiin gargaarsa kennuun, Seerota kana hordofuuf waliigalte.",
+      "sections": {
+        "purpose": {
+          "title": "1. Kaayyoo Tajaajilichaa",
+          "content": "Giddugalli Gargaarsa Barnootaa Sammuuwwan Ifoo maatiiwwan barsiisota gahumsa qaban waliin deeggarsa barnootaatiif wal qunnamsiisa. Sagantaa baasuu, qindeessuu, fi to'annoo waliigalaa ni taasifna. Sammuuwwan Ifoo mana barumsaa, barsiisota kan qacaru, yookiin bu'aa barattootaa mirkaneessuuf itti gaafatamummaa kan qabu miti. Gaheen keenya Barsiisotaafi Maamiltoota gidduutti hariiroo barumsaa mijeessuudha."
+        },
+        "eligibility": {
+          "title": "2. Gahumsa",
+          "points": [
+            "Barsiisonni adeemsa mirkaneessaa Sammuuwwan Ifoo, kan sakatta'iinsaafi sadarkaalee ogummaa of keessatti hammatu, keessa darbuu qabu.",
+            "Maamiltoonni umuriin waggaa 18 fi isaa ol ta'uu fi seera Itoophiyaa jalatti waliigaltee seenuuf gahumsa seeraa qabaachuu qabu.",
+            "Barataan umuriin isaa/ishee gadi aanaa yoo ta'e, naannoo barumsaa nageenya qabuufi to'annoo sirrii ta'e mirkaneessuun itti gaafatamummaa warra/guddistootaati.",
+            "Tajaajila keenya sirriitti fayyadamuu dhabuun yookiin seeraan ala fayyadamuun ittifamuu yookiin addaan cituu danda'a."
+          ]
+        },
+        "independentRelationship": {
+          "title": "3. Hariiroo Walabaa",
+          "description": "Barsiisonni karaa Sammuuwwan Ifoo hojjetan dhiyeessitoota walabaati malee hojjettoota miti. Kunis jechuun:",
+          "points": [
+            "Barsiisonni seera hojjetaa Itoophiyaa jalatti faayidaa yookiin eegumsa hojjettootaaf kennamu argachuuf mirga hin qaban.",
+            "Maamiltoonni Barsiisota akka hojjetaa manaatti yookiin hojjetaa isaaniitti ilaaluu hin danda'an.",
+            "Barsiisonni qophii gargaarsa barnootaatiin ala akka bakka bu'aa seeraa Sammuuwwan Ifoo of dhiyeessuu hin danda'an."
+          ]
+        },
+        "tutorResponsibilities": {
+          "title": "4. Itti Gaafatamummaa Barsiisotaa",
+          "agreeTo": {
+            "title": "Barsiisonni kanneen armaan gadiitiif ni waliigalu:",
+            "points": [
+              "Qophaa'anii fi yeroon argamuu.",
+              "Barnoota ogummaadhaan kennuu.",
+              "Iccitii fi kabaja eeguu.",
+              "Sadarkaalee naamusaa Sammuuwwan Ifoo hordofuu."
+            ]
+          },
+          "mustNot": {
+            "title": "Barsiisonni gochuu kan hin qabne:",
+            "points": [
+              "Kaffaltii pilaatfoormii keenyaan alaa gaafachuu.",
+              "Odeeffannoo qunnamtii dhuunfaa kaayyoo gargaarsa barnootaatiin alatti hiru.",
+              "Hojiiwwan barnootaan ala ta'an (kan akka daldala yookiin daa'ima eeguu) hojjechuu."
+            ]
+          }
+        },
+        "clientResponsibilities": {
+          "title": "5. Itti Gaafatamummaa Maamiltootaa",
+          "description": "Maamiltoonni kanneen armaan gadiitiif ni waliigalu:",
+          "points": [
+            "Naannoo qo'annoo nageenya qabuufi tasgabbaa'aa ta'e qopheessuu.",
+            "Daangaa gahee hojii barsiisotaa kabajuu.",
+            "Yeroon kaffaltii barumsaa raawwachuu.",
+            "Yaaddoo qaban kallattiin Sammuuwwan Ifoo waliin dubbachuu malee, dhuunfaan Barsiisota waliin miti."
+          ]
+        },
+        "payments": {
+          "title": "6. Kaffaltiiwwan",
+          "points": [
+            "Yoo haala addaatiin hayyamame malee, kaffaltiin karaa Sammuuwwan Ifoo raawwatamuu qaba.",
+            "Kaffaltiin kamiyyuu kallattiin Barsiisaaf raawwatame galmeef jecha Sammuuwwan Ifootti gabaafamuu qaba.",
+            "Sammuuwwan Ifoo kaffaltii tajaajilaa yookiin qindoominaa gaafachuu danda'a.",
+            "Maallaqa deebisuunfi sirreeffamni murtoo Sammuuwwan Ifootiin raawwatama."
+          ]
+        },
+        "learningOutcomes": {
+          "title": "7. Bu'aa Barumsaa",
+          "content": "Gargaarsi barnootaa guddina barnootaa deeggaruuf kan akeekedha, haa ta'u malee Sammuuwwan Ifoo qabxii addaa, bu'aa yookiin fooyya'iinsa mirkanaa'e waadaa seenuu hin danda'u. Barachuun tattaaffii waloo barataa, maatii fi barsiisaa irratti hundaa'a."
+        },
+        "refundPolicy": {
+          "title": "8. Imaammata Maallaqa Deebisuu",
+          "content": "Maallaqa deebisuun dhuunfaan ilaallama. Barumsi dursee kaffalame haala irratti hundaa'uun deebifamuu, herreegatti galuu yookiin dhabamuu danda'a. Yeroo baayyee haquun yookiin waliigaltee cabsuun mirga maallaqa deebisii irratti dhiibbaa geessisuu danda'a."
+        },
+        "cancellations": {
+          "title": "9. Haquufi Irra Deebiin Saganteessuu",
+          "points": [
+            "Barsiisotaafi Maamiltoonni lamaanuu yoo waliigalan barumsa irra deebiin saganteessuu danda'u.",
+            "Yeroo baayyee haquun yookiin jijjiirraan daqiiqaa dhumaa, xiinxala yookiin ramaddii haarawaaf Sammuuwwan Ifootti gabaafamuu qaba."
+          ]
+        },
+        "limitationOfLiability": {
+          "title": "10. Daangaa Itti Gaafatamummaa",
+          "description": "Sammuuwwan Ifoo miidhaa, kasaaraa, yookiin walitti bu'iinsa yeroo gargaarsa barnootaa uumamuuf itti gaafatamummaa hin qabu. Tajaajila keenya fayyadamuun, Barsiisotaafi Maamiltoonni Sammuuwwan Ifoo himata armaan gadii irraa bilisa gochuuf waliigalu:",
+          "points": [
+            "Amala badaa yookiin dagannoo gama kamiinuu raawwatame,",
+            "Miidhaa qabeenyaa yookiin dhimmoota iccitii,",
+            "Miidhaa miiraa yookiin qaamaa,",
+            "Raawwii barnootaa barataa."
+          ]
+        },
+        "privacy": {
+          "title": "11. Iccitiifi Amanamummaa",
+          "points": [
+            "Barsiisonni odeeffannoo barataa icciitiin qabuu qabu.",
+            "Maamiltoonni odeeffannoo Barsiisaa (akka suuraa yookiin qunnamtii) sirriitti fayyadamuu hin qaban.",
+            "Sammuuwwan Ifoo ragaa tajaajila kennuuf barbaachisu qofa walitti qaba, yoo seeraan dirqisiifame malee hayyama malee hin hiru."
+          ]
+        },
+        "termination": {
+          "title": "12. Addaan Kutuu",
+          "description": "Sammuuwwan Ifoo tajaajila sababoota armaan gadiitiin ittisuu yookiin addaan kutuu danda'a:",
+          "points": [
+            "Seerota kana cabsuu,",
+            "Kaffaltii dhabuu,",
+            "Yaaddoo nageenyaa yookiin amala badaa."
+          ],
+          "additional": "Maamiltootaafi Barsiisonnis Sammuuwwan Ifootti beeksisuun waliigaltee isaanii addaan kutuu danda'u."
+        },
+        "sharedInformation": {
+          "title": "13. Fayyadama Odeeffannoo Hiramee",
+          "content": "Odeeffannoon Barsiisotaafi Maamiltoota gidduutti hirame kaayyoo barnootaatiif qofa ooluu qaba. Odeeffannoon dhuunfaa eegamuu qaba, hayyama malee qaama sadaffaaf hiramuu hin qabu."
+        }
+      },
+      "footer": {
+        "contact": "Seerotaafi Haalawwan kana ilaalchisee gaaffii yoo qabaattan, karaa pilaatfoormii keenyaa nu qunnamaa.",
+        "lastUpdated": "Yeroo Dhumaaf Fooyya'e: Hagayya 2, 2025"
+      }
+    },
+    "requestForm": {
+      "titles": {
+        "chooseTutor": "Gaaffii Barsiisaa Filachuu",
+        "contactUs": "Gaaffii Qunnamtii"
+      },
+      "selectedTutor": {
+        "title": "Barsiisaa Filatame:",
+        "subjects": "Gosa Barnootaa:",
+        "areaCoverage": "Naannoo Tajaajilaa:"
+      },
+      "form": {
+        "parentFullName": {
+          "label": "Maqaa Guutuu Warraa *",
+          "placeholder": "Maqaa guutuu warraa galchaa"
+        },
+        "parentPhoneNumber": {
+          "label": "Lakkoofsa Bilbilaa Warraa *",
+          "placeholder": "Lakkoofsa bilbilaa galchaa"
+        },
+        "email": {
+          "label": "Teessoo Imeeyilii *",
+          "placeholder": "Teessoo imeeyilii galchaa"
+        },
+        "homeAddress": {
+          "label": "Teessoo Manaa *",
+          "placeholder": "Iddoo sirrii galchaa"
+        },
+        "gradeLevel": {
+          "label": "Sadarkaa Kutaa *",
+          "placeholder": "Kutaa filadhu"
+        },
+        "hoursPerDay": {
+          "label": "Sa'aatii Guyyaatti *",
+          "placeholder": "Sa'aatii filadhu"
+        },
+        "daysPerWeek": {
+          "label": "Guyyoota Torbaniitti *",
+          "placeholder": "Guyyoota filadhu"
+        },
+        "specialNeeds": {
+          "label": "Fedhii Addaa (Filannoo)",
+          "placeholder": "Fedhii yookiin barbaachisummaa addaa kamiyyuu ibsi..."
+        }
+      },
+      "gradeLevels": [
+        "KG", "Kutaa 1ffaa", "Kutaa 2ffaa", "Kutaa 3ffaa", "Kutaa 4ffaa", "Kutaa 5ffaa", "Kutaa 6ffaa",
+        "Kutaa 7ffaa", "Kutaa 8ffaa", "Kutaa 9ffaa", "Kutaa 10ffaa", "Kutaa 11ffaa", "Kutaa 12ffaa"
+      ],
+      "hoursOptions": ["Sa'aatii 1", "Sa'aatii 2", "Sa'aatii 3", "Sa'aatii 4", "Sa'aatii 5+"],
+      "daysOptions": ["Guyyaa 1", "Guyyoota 2", "Guyyoota 3", "Guyyoota 4", "Guyyoota 5", "Guyyoota 6", "Guyyoota 7"],
+      "termsAndConditions": {
+        "label": "Seerotaafi Haalawwan Giddugala Gargaarsa Barnootaa Sammuuwwan Ifoo waliin walii nan gala *",
+        "description": "Saanduqa kana mallatteessuun, seerotaafi haalawwan keenya dubbistee, hubattee, fi ittiin buluuf waliigaluu kee mirkaneessita.",
+        "linkText": "Seerotaafi Haalawwan"
+      },
+      "validation": {
+        "title": "Mee dogoggora armaan gadii sirreessi:",
+        "requiredFields": "barbaachisaadha",
+        "termsAgreement": "Seerotaafi Haalawwan waliin walii galuu qabda"
+      },
+      "buttons": {
+        "cancel": "Haqi",
+        "submitRequest": "Gaaffii Galchi",
+        "sendMessage": "Ergaa Ergi",
+        "sending": "Ergamaa jira...",
+        "sentSuccessfully": "Milkaa'inaan Ergameera!"
+      },
+      "errors": {
+        "failedToSend": "Ergaa erguun hin milkoofne. Irra deebi'ii yaali."
+      }
+    },
+    "notFound": {
+      "title": "404",
+      "message": "Dhiifama! Fuulli kun hin argamne",
+      "returnHome": "Gara Fuula Jalqabaatti Deebi'i"
+    },
+    "telegram": {
+      "newRequest": "🎓 Gaaffii Gargaarsa Barnootaa Haaraa",
+      "selectedTutor": "Barsiisaa Filatame:",
+      "generalContact": "Gaaffii Qunnamtii Waliigalaa",
+      "parentInformation": "Odeeffannoo Warraa:",
+      "fullName": "Maqaa Guutuu:",
+      "phone": "Bilbila:",
+      "email": "Imeeyilii:",
+      "locationSchedule": "Iddoofi Sagantaa:",
+      "homeAddress": "Teessoo Manaa:",
+      "gradeLevel": "Sadarkaa Kutaa:",
+      "hoursPerDay": "Sa'aatii Guyyaatti:",
+      "daysPerWeek": "Guyyoota Torbaniitti:",
+      "specialNeeds": "Fedhii Addaa:",
+      "tutorDetails": "Odeeffannoo Barsiisaa:",
+      "subjects": "Gosa Barnootaa:",
+      "areaCoverage": "Naannoo Tajaajilaa:",
+      "submittedAt": "Yeroo Galmeeffame:"
+    }
+  }

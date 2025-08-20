@@ -2,16 +2,18 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
 const HeroSection = () => {
+  const { t } = useLocalizationContext();
+
   const [currentText, setCurrentText] = useState(0);
   const [isTyping, setIsTyping] = useState(true);
   
   const typingTexts = [
-    "Self Confidence",
-    "A Bright Future", 
-    "Success",
-    "Excellence"
+    t("heroSection.selfConfidence"),
+    t("heroSection.brightFuture"), 
+    t("heroSection.success"),
+    t("heroSection.excellence")
   ];
 
   useEffect(() => {
@@ -53,11 +55,11 @@ const HeroSection = () => {
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-              A good{" "}
+             {t("heroSection.title.a")}
               <span className="gradient-primary bg-clip-text text-transparent">
-                #education
+                {t("heroSection.title.b")}
               </span>{" "}
-              is always a base of{" "}
+              {t("heroSection.title.c")}
               <span 
                 className={`inline-block text-secondary transition-all duration-500 ${
                   isTyping ? 'opacity-100' : 'opacity-0'
@@ -68,7 +70,7 @@ const HeroSection = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl">
-               Where learning meets purpose!
+              {t("heroSection.subtitle")}
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
@@ -77,7 +79,7 @@ const HeroSection = () => {
                 className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-primary group"
               >
                 <Link to="/instructors" className="flex items-center">
-                  Find Tutor
+                  {t("heroSection.primaryCta")}
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
@@ -95,32 +97,32 @@ const HeroSection = () => {
                     <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-2xl">📚</span>
                     </div>
-                    <h3 className="font-semibold text-primary mb-1">Self Confidence</h3>
-                    <p className="text-xs text-muted-foreground">Build strong foundations</p>
+                    <h3 className="font-semibold text-primary mb-1">{t("heroSection.selfConfidence")}</h3>
+                    <p className="text-xs text-muted-foreground">{t("heroSection.selfConfidenceDescription")}</p>
                   </div>
                   
                   <div className="bg-secondary-lighter rounded-2xl p-4 text-center">
                     <div className="w-16 h-16 bg-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-2xl">🎯</span>
                     </div>
-                    <h3 className="font-semibold text-secondary mb-1">Bright Future</h3>
-                    <p className="text-xs text-muted-foreground">Achieve your goals</p>
+                    <h3 className="font-semibold text-secondary mb-1">{t("heroSection.brightFuture")}</h3>
+                    <p className="text-xs text-muted-foreground">{t("heroSection.brightFutureDescription")}</p>
                   </div>
                   
                   <div className="bg-accent/20 rounded-2xl p-4 text-center">
                     <div className="w-16 h-16 bg-accent rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-2xl">⭐</span>
                     </div>
-                    <h3 className="font-semibold text-accent mb-1">Excellence</h3>
-                    <p className="text-xs text-muted-foreground">Strive for the best</p>
+                    <h3 className="font-semibold text-accent mb-1">{t("heroSection.excellence")}</h3>
+                    <p className="text-xs text-muted-foreground">{t("heroSection.excellenceDescription")}</p>
                   </div>
                   
                   <div className="bg-success/20 rounded-2xl p-4 text-center">
                     <div className="w-16 h-16 bg-success rounded-full mx-auto mb-3 flex items-center justify-center">
                       <span className="text-2xl">🚀</span>
                     </div>
-                    <h3 className="font-semibold text-success mb-1">Success</h3>
-                    <p className="text-xs text-muted-foreground">Reach new heights</p>
+                    <h3 className="font-semibold text-success mb-1">{t("heroSection.success")}</h3>
+                    <p className="text-xs text-muted-foreground">{t("heroSection.successDescription")}</p>
                   </div>
                 </div>
               </div>

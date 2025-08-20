@@ -1,5 +1,6 @@
 import { useEffect, useState, useRef } from "react";
 import { Card, CardContent } from "@/components/ui/card";
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
 interface StatItem {
   value: number;
@@ -13,12 +14,13 @@ const StatsSection = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [animatedValues, setAnimatedValues] = useState<number[]>([0, 0, 0, 0]);
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLocalizationContext();
   
   const stats: StatItem[] = [
-    { value: 530, label: "Students Taught", suffix: "+", color: "text-primary", icon: "👨‍🎓" },
-    { value: 70, label: "Retention Rate", suffix: "%", color: "text-secondary", icon: "📈" },
-    { value: 60, label: "Referral Growth", suffix: "%", color: "text-accent", icon: "🤝" },
-    { value: 95, label: "Positive Feedback", suffix: "%", color: "text-success", icon: "⭐" }
+    { value: 530, label: t("statsSection.studentsTaught"), suffix: "+", color: "text-primary", icon: "👨‍🎓" },
+    { value: 70, label: t("statsSection.retentionRate"), suffix: "%", color: "text-secondary", icon: "📈" },
+    { value: 60, label: t("statsSection.referralGrowth"), suffix: "%", color: "text-accent", icon: "🤝" },
+    { value: 95, label: t("statsSection.positiveFeedback"), suffix: "%", color: "text-success", icon: "⭐" }
   ];
 
   useEffect(() => {
@@ -74,13 +76,13 @@ const StatsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-            Our Pilot Program{" "}
+            {t("statsSection.title")}
             <span className="gradient-primary bg-clip-text text-transparent">
-              Success Metrics
+              {t("statsSection.successMetrics")}
             </span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Real results from our community of dedicated learners and expert tutors
+            {t("statsSection.description")}
           </p>
         </div>
 
@@ -110,12 +112,10 @@ const StatsSection = () => {
         <div className="mt-16 text-center">
           <div className="bg-gradient-card rounded-2xl p-8 shadow-card max-w-4xl mx-auto">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              "Early Wins" - Building Trust Through Results
+              {t("statsSection.earlyWins")}
             </h3>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              These numbers represent real students who have experienced transformation 
-              through our personalized tutoring approach. Each statistic tells a story 
-              of academic improvement, increased confidence, and educational success.
+              {t("statsSection.earlyWinsDescription")}
             </p>
           </div>
         </div>

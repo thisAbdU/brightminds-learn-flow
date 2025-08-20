@@ -9,6 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { X, Send, User, Phone, Mail, MapPin, BookOpen, Clock, Calendar, MessageSquare } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
 interface Tutor {
   id: number;
@@ -40,13 +41,11 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
   const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
-  const gradeLevels = [
-    "KG", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6",
-    "Grade 7", "Grade 8", "Grade 9", "Grade 10", "Grade 11", "Grade 12"
-  ];
+  const { t } = useLocalizationContext();
 
-  const hoursOptions = ["1 hour", "2 hours", "3 hours", "4 hours", "5+ hours"];
-  const daysOptions = ["1 day", "2 days", "3 days", "4 days", "5 days", "6 days", "7 days"];
+  const gradeLevels = t("requestForm.gradeLevels");
+  const hoursOptions = t("requestForm.hoursOptions");
+  const daysOptions = t("requestForm.daysOptions");
 
   useEffect(() => {
     if (isOpen) {
@@ -78,12 +77,12 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
     
     requiredFields.forEach(field => {
       if (!formData[field as keyof typeof formData].trim()) {
-        errors.push(`${field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} is required`);
+        errors.push(`${field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} ${t("requestForm.validation.requiredFields")}`);
       }
     });
     
     if (!agreedToTerms) {
-      errors.push("You must agree to the Terms and Conditions");
+      errors.push(t("requestForm.validation.termsAgreement"));
     }
     
     setValidationErrors(errors);
@@ -131,30 +130,30 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
     setIsSubmitting(true);
 
     const message = `
-<b>🎓 New Tutoring Request</b>
+<b>${t("telegram.newRequest")}</b>
 
-${selectedTutor ? `<b>Selected Tutor:</b> ${selectedTutor.name}` : "<b>General Contact Request</b>"}
+${selectedTutor ? `<b>${t("telegram.selectedTutor")}</b> ${selectedTutor.name}` : `<b>${t("telegram.generalContact")}</b>`}
 
-<b>Parent Information:</b>
-👤 <b>Full Name:</b> ${formData.parentFullName}
-📱 <b>Phone:</b> ${formData.parentPhoneNumber}
-📧 <b>Email:</b> ${formData.email}
+<b>${t("telegram.parentInformation")}</b>
+👤 <b>${t("telegram.fullName")}</b> ${formData.parentFullName}
+📱 <b>${t("telegram.phone")}</b> ${formData.parentPhoneNumber}
+📧 <b>${t("telegram.email")}</b> ${formData.email}
 
-<b>Location & Schedule:</b>
-📍 <b>Home Address:</b> ${formData.homeAddress}
-📚 <b>Grade Level:</b> ${formData.gradeLevel}
-⏰ <b>Hours per Day:</b> ${formData.hoursPerDay}
-📅 <b>Days per Week:</b> ${formData.daysPerWeek}
+<b>${t("telegram.locationSchedule")}</b>
+📍 <b>${t("telegram.homeAddress")}</b> ${formData.homeAddress}
+📚 <b>${t("telegram.gradeLevel")}</b> ${formData.gradeLevel}
+⏰ <b>${t("telegram.hoursPerDay")}</b> ${formData.hoursPerDay}
+📅 <b>${t("telegram.daysPerWeek")}</b> ${formData.daysPerWeek}
 
-${formData.specialNeeds ? `<b>Special Needs:</b>\n${formData.specialNeeds}` : ""}
+${formData.specialNeeds ? `<b>${t("telegram.specialNeeds")}</b>\n${formData.specialNeeds}` : ""}
 
 ${selectedTutor ? `
-<b>Tutor Details:</b>
-📚 <b>Subjects:</b> ${selectedTutor.subjects.join(", ")}
-🗺️ <b>Area Coverage:</b> ${selectedTutor.areaCoverage.join(", ")}
+<b>${t("telegram.tutorDetails")}</b>
+📚 <b>${t("telegram.subjects")}</b> ${selectedTutor.subjects.join(", ")}
+🗺️ <b>${t("telegram.areaCoverage")}</b> ${selectedTutor.areaCoverage.join(", ")}
 ` : ""}
 
-<i>Submitted at: ${new Date().toLocaleString()}</i>
+<i>${t("telegram.submittedAt")} ${new Date().toLocaleString()}</i>
     `.trim();
 
     const success = await sendTelegramMessage(message);
@@ -178,7 +177,7 @@ ${selectedTutor ? `
       <Card className="w-full max-w-2xl max-h-[90vh] overflow-y-auto">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-4">
           <CardTitle className="text-xl font-semibold">
-            {selectedTutor ? "Choose Tutor Request" : "Contact Us Request"}
+            {selectedTutor ? t("requestForm.titles.chooseTutor") : t("requestForm.titles.contactUs")}
           </CardTitle>
           <Button
             variant="ghost"
@@ -193,9 +192,9 @@ ${selectedTutor ? `
         <CardContent className="space-y-6">
           {selectedTutor && (
             <div className="bg-muted/30 rounded-lg p-4">
-              <h3 className="font-semibold mb-2">Selected Tutor: {selectedTutor.name}</h3>
+              <h3 className="font-semibold mb-2">{t("requestForm.selectedTutor.title")} {selectedTutor.name}</h3>
               <div className="flex flex-wrap gap-2 mb-2">
-                <span className="text-sm font-medium">Subjects:</span>
+                <span className="text-sm font-medium">{t("requestForm.selectedTutor.subjects")}</span>
                 {selectedTutor.subjects.map((subject, idx) => (
                   <Badge key={idx} variant="secondary" className="text-xs">
                     {subject}
@@ -203,7 +202,7 @@ ${selectedTutor ? `
                 ))}
               </div>
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm font-medium">Area Coverage:</span>
+                <span className="text-sm font-medium">{t("requestForm.selectedTutor.areaCoverage")}</span>
                 {selectedTutor.areaCoverage.map((area, idx) => (
                   <Badge key={idx} variant="outline" className="text-xs">
                     {area}
@@ -218,13 +217,13 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="parentFullName" className="flex items-center gap-2">
                   <User className="h-4 w-4" />
-                  Parent Full Name *
+                  {t("requestForm.form.parentFullName.label")}
                 </Label>
                 <Input
                   id="parentFullName"
                   value={formData.parentFullName}
                   onChange={(e) => handleInputChange("parentFullName", e.target.value)}
-                  placeholder="Enter parent's full name"
+                  placeholder={t("requestForm.form.parentFullName.placeholder")}
                   required
                 />
               </div>
@@ -232,13 +231,13 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="parentPhoneNumber" className="flex items-center gap-2">
                   <Phone className="h-4 w-4" />
-                  Parent Phone Number *
+                  {t("requestForm.form.parentPhoneNumber.label")}
                 </Label>
                 <Input
                   id="parentPhoneNumber"
                   value={formData.parentPhoneNumber}
                   onChange={(e) => handleInputChange("parentPhoneNumber", e.target.value)}
-                  placeholder="Enter phone number"
+                  placeholder={t("requestForm.form.parentPhoneNumber.placeholder")}
                   required
                 />
               </div>
@@ -248,14 +247,14 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="email" className="flex items-center gap-2">
                   <Mail className="h-4 w-4" />
-                  Email Address *
+                  {t("requestForm.form.email.label")}
                 </Label>
                 <Input
                   id="email"
                   type="email"
                   value={formData.email}
                   onChange={(e) => handleInputChange("email", e.target.value)}
-                  placeholder="Enter email address"
+                  placeholder={t("requestForm.form.email.placeholder")}
                   required
                 />
               </div>
@@ -263,13 +262,13 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="homeAddress" className="flex items-center gap-2">
                   <MapPin className="h-4 w-4" />
-                  Home Address *
+                  {t("requestForm.form.homeAddress.label")}
                 </Label>
                 <Input
                   id="homeAddress"
                   value={formData.homeAddress}
                   onChange={(e) => handleInputChange("homeAddress", e.target.value)}
-                  placeholder="Enter specific location"
+                  placeholder={t("requestForm.form.homeAddress.placeholder")}
                   required
                 />
               </div>
@@ -279,7 +278,7 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="gradeLevel" className="flex items-center gap-2">
                   <BookOpen className="h-4 w-4" />
-                  Grade Level *
+                  {t("requestForm.form.gradeLevel.label")}
                 </Label>
                 <Select
                   value={formData.gradeLevel}
@@ -287,10 +286,10 @@ ${selectedTutor ? `
                   required
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select grade" />
+                    <SelectValue placeholder={t("requestForm.form.gradeLevel.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {gradeLevels.map((grade) => (
+                    {gradeLevels.map((grade: string) => (
                       <SelectItem key={grade} value={grade}>
                         {grade}
                       </SelectItem>
@@ -302,7 +301,7 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="hoursPerDay" className="flex items-center gap-2">
                   <Clock className="h-4 w-4" />
-                  Hours per Day *
+                  {t("requestForm.form.hoursPerDay.label")}
                 </Label>
                 <Select
                   value={formData.hoursPerDay}
@@ -310,10 +309,10 @@ ${selectedTutor ? `
                   required
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select hours" />
+                    <SelectValue placeholder={t("requestForm.form.hoursPerDay.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {hoursOptions.map((hours) => (
+                    {hoursOptions.map((hours: string) => (
                       <SelectItem key={hours} value={hours}>
                         {hours}
                       </SelectItem>
@@ -325,7 +324,7 @@ ${selectedTutor ? `
               <div className="space-y-2">
                 <Label htmlFor="daysPerWeek" className="flex items-center gap-2">
                   <Calendar className="h-4 w-4" />
-                  Days per Week *
+                  {t("requestForm.form.daysPerWeek.label")}
                 </Label>
                 <Select
                   value={formData.daysPerWeek}
@@ -333,10 +332,10 @@ ${selectedTutor ? `
                   required
                 >
                   <SelectTrigger>
-                    <SelectValue placeholder="Select days" />
+                    <SelectValue placeholder={t("requestForm.form.daysPerWeek.placeholder")} />
                   </SelectTrigger>
                   <SelectContent>
-                    {daysOptions.map((days) => (
+                    {daysOptions.map((days: string) => (
                       <SelectItem key={days} value={days}>
                         {days}
                       </SelectItem>
@@ -349,13 +348,13 @@ ${selectedTutor ? `
             <div className="space-y-2">
               <Label htmlFor="specialNeeds" className="flex items-center gap-2">
                 <MessageSquare className="h-4 w-4" />
-                Special Needs (Optional)
+                {t("requestForm.form.specialNeeds.label")}
               </Label>
               <Textarea
                 id="specialNeeds"
                 value={formData.specialNeeds}
                 onChange={(e) => handleInputChange("specialNeeds", e.target.value)}
-                placeholder="Describe any special requirements or needs..."
+                placeholder={t("requestForm.form.specialNeeds.placeholder")}
                 rows={3}
               />
             </div>
@@ -370,18 +369,10 @@ ${selectedTutor ? `
               />
               <div className="space-y-1">
                 <Label htmlFor="terms" className="text-sm leading-relaxed">
-                  I agree to the{" "}
-                  <Link 
-                    to="/terms" 
-                    target="_blank" 
-                    className="text-primary hover:underline font-medium"
-                  >
-                    Terms and Conditions
-                  </Link>{" "}
-                  of BrightMinds Tutoring Center *
+                  {t("requestForm.termsAndConditions.label")}
                 </Label>
                 <p className="text-xs text-muted-foreground">
-                  By checking this box, you acknowledge that you have read, understood, and agree to be bound by our terms and conditions.
+                  {t("requestForm.termsAndConditions.description")}
                 </p>
               </div>
             </div>
@@ -389,7 +380,7 @@ ${selectedTutor ? `
             {/* Validation Errors */}
             {validationErrors.length > 0 && (
               <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-3">
-                <p className="text-sm font-medium text-destructive mb-2">Please fix the following errors:</p>
+                <p className="text-sm font-medium text-destructive mb-2">{t("requestForm.validation.title")}</p>
                 <ul className="space-y-1">
                   {validationErrors.map((error, index) => (
                     <li key={index} className="text-sm text-destructive flex items-start">
@@ -409,7 +400,7 @@ ${selectedTutor ? `
                 className="flex-1"
                 disabled={isSubmitting}
               >
-                Cancel
+                {t("requestForm.buttons.cancel")}
               </Button>
               <Button
                 type="submit"
@@ -417,13 +408,13 @@ ${selectedTutor ? `
                 disabled={isSubmitting}
               >
                 {isSubmitting ? (
-                  "Sending..."
+                  t("requestForm.buttons.sending")
                 ) : submitStatus === "success" ? (
-                  "Sent Successfully!"
+                  t("requestForm.buttons.sentSuccessfully")
                 ) : (
                   <>
                     <Send className="h-4 w-4 mr-2" />
-                    {selectedTutor ? "Submit Request" : "Send Message"}
+                    {selectedTutor ? t("requestForm.buttons.submitRequest") : t("requestForm.buttons.sendMessage")}
                   </>
                 )}
               </Button>
@@ -431,7 +422,7 @@ ${selectedTutor ? `
 
             {submitStatus === "error" && (
               <div className="text-red-600 text-sm text-center">
-                Failed to send message. Please try again.
+                {t("requestForm.errors.failedToSend")}
               </div>
             )}
           </form>

@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import RequestForm from "@/components/RequestForm";
 import Layout from "@/components/Layout";
+import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
 const Instructors = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -26,85 +27,133 @@ const Instructors = () => {
     areaCoverage: string[];
   } | null>(null);
 
-  // Sample instructor data
+  const { t } = useLocalizationContext();
+
+  // Localized instructor data
   const instructors = [
     {
       id: 1,
-      name: "Dr. Mehret Teshome",
+      name: t("instructors.mockData.instructors.0.name"),
       photo: "👩‍⚕️",
-      subjects: ["Mathematics", "Physics", "Chemistry"],
-      tagline: "Medical Doctor & Mathematics Specialist",
+      subjects: [
+        t("instructors.mockData.subjects.mathematics"),
+        t("instructors.mockData.subjects.physics"),
+        t("instructors.mockData.subjects.chemistry")
+      ],
+      tagline: t("instructors.mockData.instructors.0.tagline"),
       rating: 4.9,
       reviews: 127,
-      availability: "Available Today",
-      experience: "5 years",
-      location: "Addis Ababa",
-      areaCoverage: ["CMC", "Ayat", "Bole Medhane Alem Cathedral"]
+      availability: t("instructors.mockData.availability.availableToday"),
+      experience: t("instructors.mockData.instructors.0.experience"),
+      location: t("instructors.mockData.instructors.0.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.cmc"),
+        t("instructors.mockData.areas.ayat"),
+        t("instructors.mockData.areas.boleMedhaneAlem")
+      ]
     },
     {
       id: 2,
-      name: "Dawit Bekele",
+      name: t("instructors.mockData.instructors.1.name"),
       photo: "👨‍⚕️",
-      subjects: ["Biology", "Chemistry", "English"],
-      tagline: "Medical Student at AAU",
+      subjects: [
+        t("instructors.mockData.subjects.biology"),
+        t("instructors.mockData.subjects.chemistry"),
+        t("instructors.mockData.subjects.english")
+      ],
+      tagline: t("instructors.mockData.instructors.1.tagline"),
       rating: 4.8,
       reviews: 89,
-      availability: "Available Tomorrow",
-      experience: "3 years",
-      location: "Addis Ababa",
-      areaCoverage: ["Gurd Shola", "Kotebe", "Kazanchis"]
+      availability: t("instructors.mockData.availability.availableTomorrow"),
+      experience: t("instructors.mockData.instructors.1.experience"),
+      location: t("instructors.mockData.instructors.1.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.gurdShola"),
+        t("instructors.mockData.areas.kotebe"),
+        t("instructors.mockData.areas.kazanchis")
+      ]
     },
     {
       id: 3,
-      name: "Hanan Mohammed",
+      name: t("instructors.mockData.instructors.2.name"),
       photo: "👩‍🎓",
-      subjects: ["Mathematics", "Physics"],
-      tagline: "Engineering Graduate & Math Expert",
+      subjects: [
+        t("instructors.mockData.subjects.mathematics"),
+        t("instructors.mockData.subjects.physics")
+      ],
+      tagline: t("instructors.mockData.instructors.2.tagline"),
       rating: 4.9,
       reviews: 156,
-      availability: "Available Today",
-      experience: "4 years",
-      location: "Addis Ababa",
-      areaCoverage: ["Merkato", "Sarbet/Old Airport", "Goro"]
+      availability: t("instructors.mockData.availability.availableToday"),
+      experience: t("instructors.mockData.instructors.2.experience"),
+      location: t("instructors.mockData.instructors.2.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.merkato"),
+        t("instructors.mockData.areas.sarbetOldAirport"),
+        t("instructors.mockData.areas.goro")
+      ]
     },
     {
       id: 4,
-      name: "Yohannes Girma",
+      name: t("instructors.mockData.instructors.3.name"),
       photo: "👨‍🎓",
-      subjects: ["Chemistry", "Biology", "Mathematics"],
-      tagline: "Medical Student & Science Tutor",
+      subjects: [
+        t("instructors.mockData.subjects.chemistry"),
+        t("instructors.mockData.subjects.biology"),
+        t("instructors.mockData.subjects.mathematics")
+      ],
+      tagline: t("instructors.mockData.instructors.3.tagline"),
       rating: 4.7,
       reviews: 94,
-      availability: "Available This Week",
-      experience: "2 years",
-      location: "Addis Ababa",
-      areaCoverage: ["CMC", "Ayat", "Bole Medhane Alem Cathedral"]
+      availability: t("instructors.mockData.availability.availableThisWeek"),
+      experience: t("instructors.mockData.instructors.3.experience"),
+      location: t("instructors.mockData.instructors.3.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.cmc"),
+        t("instructors.mockData.areas.ayat"),
+        t("instructors.mockData.areas.boleMedhaneAlem")
+      ]
     },
     {
       id: 5,
-      name: "Sara Hailu",
+      name: t("instructors.mockData.instructors.4.name"),
       photo: "👩‍🏫",
-      subjects: ["English", "Literature", "History"],
-      tagline: "Language & Literature Specialist",
+      subjects: [
+        t("instructors.mockData.subjects.english"),
+        t("instructors.mockData.subjects.literature"),
+        t("instructors.mockData.subjects.history")
+      ],
+      tagline: t("instructors.mockData.instructors.4.tagline"),
       rating: 4.8,
       reviews: 112,
-      availability: "Available Today",
-      experience: "6 years",
-      location: "Addis Ababa",
-      areaCoverage: ["Gurd Shola", "Kotebe", "Kazanchis"]
+      availability: t("instructors.mockData.availability.availableToday"),
+      experience: t("instructors.mockData.instructors.4.experience"),
+      location: t("instructors.mockData.instructors.4.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.gurdShola"),
+        t("instructors.mockData.areas.kotebe"),
+        t("instructors.mockData.areas.kazanchis")
+      ]
     },
     {
       id: 6,
-      name: "Robel Tadesse",
+      name: t("instructors.mockData.instructors.5.name"),
       photo: "👨‍💻",
-      subjects: ["Mathematics", "Computer Science"],
-      tagline: "Computer Science Graduate",
+      subjects: [
+        t("instructors.mockData.subjects.mathematics"),
+        t("instructors.mockData.subjects.computerScience")
+      ],
+      tagline: t("instructors.mockData.instructors.5.tagline"),
       rating: 4.9,
       reviews: 78,
-      availability: "Available Tomorrow",
-      experience: "3 years",
-      location: "Addis Ababa",
-      areaCoverage: ["Merkato", "Sarbet/Old Airport", "Goro"]
+      availability: t("instructors.mockData.availability.availableTomorrow"),
+      experience: t("instructors.mockData.instructors.5.experience"),
+      location: t("instructors.mockData.instructors.5.location"),
+      areaCoverage: [
+        t("instructors.mockData.areas.merkato"),
+        t("instructors.mockData.areas.sarbetOldAirport"),
+        t("instructors.mockData.areas.goro")
+      ]
     }
   ];
 
@@ -126,10 +175,10 @@ const Instructors = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in pt-16">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-                Find Your Perfect Instructor
+                {t("instructors.hero.title")}
               </h1>
               <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
-                Connect with Ethiopia's top medical students and professionals
+                {t("instructors.hero.subtitle")}
               </p>
             </div>
           </div>
@@ -143,7 +192,7 @@ const Instructors = () => {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-5 w-5" />
                 <Input
                   type="text"
-                  placeholder="Search by subject or instructor name..."
+                  placeholder={t("instructors.search.placeholder")}
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10 pr-4 py-3 text-lg border-2 border-border focus:border-primary"
@@ -151,19 +200,19 @@ const Instructors = () => {
               </div>
               <div className="flex flex-wrap gap-2 mt-4 justify-center">
                 <Badge variant="secondary" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
-                  Mathematics
+                  {t("instructors.search.quickFilters.mathematics")}
                 </Badge>
                 <Badge variant="secondary" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
-                  Physics
+                  {t("instructors.search.quickFilters.physics")}
                 </Badge>
                 <Badge variant="secondary" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
-                  Chemistry
+                  {t("instructors.search.quickFilters.chemistry")}
                 </Badge>
                 <Badge variant="secondary" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
-                  Biology
+                  {t("instructors.search.quickFilters.biology")}
                 </Badge>
                 <Badge variant="secondary" className="cursor-pointer hover:bg-primary hover:text-white transition-colors">
-                  English
+                  {t("instructors.search.quickFilters.english")}
                 </Badge>
               </div>
             </div>
@@ -175,11 +224,11 @@ const Instructors = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl font-bold text-foreground">
-                Available Instructors ({filteredInstructors.length})
+                {t("instructors.filters.title")} ({filteredInstructors.length})
               </h2>
               <Button variant="outline" size="sm" className="flex items-center">
                 <Filter className="h-4 w-4 mr-2" />
-                Filter
+                {t("instructors.filters.filterButton")}
               </Button>
             </div>
 
@@ -205,7 +254,7 @@ const Instructors = () => {
                   <CardContent className="space-y-4">
                     {/* Subjects */}
                     <div>
-                      <p className="text-sm font-medium text-foreground mb-2">Subjects:</p>
+                      <p className="text-sm font-medium text-foreground mb-2">{t("instructors.instructorCard.subjects")}</p>
                       <div className="flex flex-wrap gap-1">
                         {instructor.subjects.map((subject, idx) => (
                           <Badge key={idx} variant="outline" className="text-xs">
@@ -224,7 +273,7 @@ const Instructors = () => {
                         </span>
                       </div>
                       <span className="text-sm text-muted-foreground">
-                        ({instructor.reviews} reviews)
+                        ({instructor.reviews} {t("instructors.instructorCard.rating")})
                       </span>
                     </div>
 
@@ -236,7 +285,7 @@ const Instructors = () => {
                       </div>
                       <div className="flex items-center">
                         <BookOpen className="h-4 w-4 mr-2 text-secondary" />
-                        <span>{instructor.experience} experience</span>
+                        <span>{instructor.experience} {t("instructors.instructorCard.experience")}</span>
                       </div>
                       <div className="flex items-center">
                         <MapPin className="h-4 w-4 mr-2 text-accent" />
@@ -246,7 +295,7 @@ const Instructors = () => {
 
                     {/* Area Coverage */}
                     <div className="pt-2 border-t border-border">
-                      <p className="text-sm font-medium text-foreground mb-2">Area Coverage:</p>
+                      <p className="text-sm font-medium text-foreground mb-2">{t("instructors.instructorCard.areaCoverage")}</p>
                       <div className="flex flex-wrap gap-1">
                         {instructor.areaCoverage.map((area, idx) => (
                           <Badge key={idx} variant="secondary" className="text-xs">
@@ -271,7 +320,7 @@ const Instructors = () => {
                           setIsRequestFormOpen(true);
                         }}
                       >
-                        Choose Tutor
+                        {t("instructors.instructorCard.chooseTutor")}
                       </Button>
                       <Button 
                         variant="outline" 
@@ -290,10 +339,10 @@ const Instructors = () => {
               <div className="text-center py-12">
                 <GraduationCap className="h-16 w-16 text-muted-foreground mx-auto mb-4" />
                 <h3 className="text-xl font-semibold text-foreground mb-2">
-                  No instructors found
+                  {t("instructors.noResults.title")}
                 </h3>
                 <p className="text-muted-foreground">
-                  Try adjusting your search criteria or browse all instructors
+                  {t("instructors.noResults.description")}
                 </p>
               </div>
             )}
@@ -305,10 +354,10 @@ const Instructors = () => {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-gradient-card rounded-3xl p-8 shadow-card">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
-                Can't Find the Right Tutor?
+                {t("instructors.cta.title")}
               </h2>
               <p className="text-lg text-muted-foreground mb-8">
-                Contact us and we'll help match you with the perfect instructor for your needs
+                {t("instructors.cta.description")}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button 
@@ -319,30 +368,30 @@ const Instructors = () => {
                     setIsRequestFormOpen(true);
                   }}
                 >
-                  Contact Us
+                  {t("instructors.cta.contactUs")}
                 </Button>
                 <Button 
                   variant="outline" 
                   size="lg"
                   className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 >
-                  Browse All Subjects
+                  {t("instructors.cta.browseSubjects")}
                 </Button>
               </div>
             </div>
           </div>
         </section>
 
-      {/* Request Form Modal */}
-      <RequestForm
-        isOpen={isRequestFormOpen}
-        onClose={() => {
-          setIsRequestFormOpen(false);
-          setSelectedTutor(null);
-        }}
-        selectedTutor={selectedTutor}
-      />
-    </div>
+        {/* Request Form Modal */}
+        <RequestForm
+          isOpen={isRequestFormOpen}
+          onClose={() => {
+            setIsRequestFormOpen(false);
+            setSelectedTutor(null);
+          }}
+          selectedTutor={selectedTutor}
+        />
+      </div>
     </Layout>
   );
 };
