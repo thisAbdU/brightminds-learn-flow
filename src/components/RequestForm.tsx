@@ -6,7 +6,9 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
+import { Checkbox } from "@/components/ui/checkbox";
 import { X, Send, User, Phone, Mail, MapPin, BookOpen, Clock, Calendar, MessageSquare } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Tutor {
   id: number;
@@ -33,8 +35,10 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
     specialNeeds: ""
   });
 
+  const [agreedToTerms, setAgreedToTerms] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+  const [validationErrors, setValidationErrors] = useState<string[]>([]);
 
   const gradeLevels = [
     "KG", "Grade 1", "Grade 2", "Grade 3", "Grade 4", "Grade 5", "Grade 6",
@@ -56,6 +60,7 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
         daysPerWeek: "",
         specialNeeds: ""
       });
+      setAgreedToTerms(false);
       setSubmitStatus("idle");
     }
   }, [isOpen]);
@@ -68,8 +73,21 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
   };
 
   const validateForm = () => {
+    const errors: string[] = [];
     const requiredFields = ["parentFullName", "parentPhoneNumber", "email", "homeAddress", "gradeLevel", "hoursPerDay", "daysPerWeek"];
-    return requiredFields.every(field => formData[field as keyof typeof formData].trim() !== "");
+    
+    requiredFields.forEach(field => {
+      if (!formData[field as keyof typeof formData].trim()) {
+        errors.push(`${field.replace(/([A-Z])/g, ' $1').replace(/^./, str => str.toUpperCase())} is required`);
+      }
+    });
+    
+    if (!agreedToTerms) {
+      errors.push("You must agree to the Terms and Conditions");
+    }
+    
+    setValidationErrors(errors);
+    return errors.length === 0;
   };
 
   const sendTelegramMessage = async (message: string) => {
@@ -107,8 +125,7 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
     e.preventDefault();
     
     if (!validateForm()) {
-      alert("Please fill in all required fields");
-      return;
+      return; // Don't show alert, validation errors are displayed below
     }
 
     setIsSubmitting(true);
@@ -343,6 +360,47 @@ ${selectedTutor ? `
               />
             </div>
 
+            {/* Terms and Conditions Checkbox */}
+            <div className="flex items-start space-x-3 pt-2">
+              <Checkbox
+                id="terms"
+                checked={agreedToTerms}
+                onCheckedChange={(checked) => setAgreedToTerms(checked as boolean)}
+                className="mt-1"
+              />
+              <div className="space-y-1">
+                <Label htmlFor="terms" className="text-sm leading-relaxed">
+                  I agree to the{" "}
+                  <Link 
+                    to="/terms" 
+                    target="_blank" 
+                    className="text-primary hover:underline font-medium"
+                  >
+                    Terms and Conditions
+                  </Link>{" "}
+                  of BrightMinds Tutoring Center *
+                </Label>
+                <p className="text-xs text-muted-foreground">
+                  By checking this box, you acknowledge that you have read, understood, and agree to be bound by our terms and conditions.
+                </p>
+              </div>
+            </div>
+
+            {/* Validation Errors */}
+            {validationErrors.length > 0 && (
+              <div className="bg-destructive/10 border border-destructive/20 rounded-lg p-3">
+                <p className="text-sm font-medium text-destructive mb-2">Please fix the following errors:</p>
+                <ul className="space-y-1">
+                  {validationErrors.map((error, index) => (
+                    <li key={index} className="text-sm text-destructive flex items-start">
+                      <span className="mr-2">•</span>
+                      {error}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
             <div className="flex gap-3 pt-4">
               <Button
                 type="button"
@@ -356,7 +414,7 @@ ${selectedTutor ? `
               <Button
                 type="submit"
                 className="flex-1 gradient-primary text-white hover:opacity-90 transition-opacity"
-                disabled={isSubmitting || !validateForm()}
+                disabled={isSubmitting}
               >
                 {isSubmitting ? (
                   "Sending..."

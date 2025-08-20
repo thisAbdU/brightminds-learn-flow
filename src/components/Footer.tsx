@@ -113,6 +113,28 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-light mt-8 pt-8 text-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-4">
+            <Link 
+              to="/terms" 
+              className="text-sm opacity-75 hover:opacity-100 hover:text-secondary transition-colors"
+            >
+              Terms and Conditions
+            </Link>
+            <span className="text-sm opacity-50">|</span>
+            <Link 
+              to="/about" 
+              className="text-sm opacity-75 hover:opacity-100 hover:text-secondary transition-colors"
+            >
+              About Us
+            </Link>
+            <span className="text-sm opacity-50">|</span>
+            <Link 
+              to="/services" 
+              className="text-sm opacity-75 hover:opacity-100 hover:text-secondary transition-colors"
+            >
+              Services
+            </Link>
+          </div>
           <p className="text-sm opacity-75">
             © 2024 Bright Minds Tutoring Center. All rights reserved.
           </p>
