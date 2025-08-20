@@ -91,7 +91,7 @@ const Services = () => {
     <Layout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="pt-0 pb-12 bg-gradient-hero text-white -mt-16">
+        <section className="pt-8 pb-12 bg-gradient-to-br from-[hsl(215,84%,23%)] to-[hsl(185,80%,30%)] text-white mt-8 relative overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center animate-fade-in pt-16">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">

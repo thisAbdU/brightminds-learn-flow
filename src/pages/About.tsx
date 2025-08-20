@@ -20,16 +20,25 @@ const About = () => {
     <Layout>
       <div className="min-h-screen">
         {/* Hero Section */}
-        <section className="pt-0 pb-12 bg-gradient-hero text-white -mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="pt-8 pb-12 bg-gradient-to-br from-[hsl(215_85%_25%)] to-[hsl(185_85%_45%)] text-white mt-8 relative overflow-hidden">
+          {/* Background overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/10"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center animate-fade-in pt-16">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
                 {t("about.hero.title")}
               </h1>
-              <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
+              <p className="text-xl sm:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
                 {t("about.hero.subtitle")}
               </p>
             </div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-5">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-full blur-3xl"></div>
           </div>
         </section>
 
@@ -51,7 +60,7 @@ const About = () => {
                 {t("about.introduction.paragraph2")}
               </p>
             </div>
-            <div className="bg-gradient-card rounded-3xl p-8 shadow-card animate-slide-up">
+            <div className="bg-gradient-card rounded-3xl p-8 shadow-card animate-slide-up bg-muted/30">
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-primary rounded-2xl mx-auto mb-4 flex items-center justify-center">
@@ -92,7 +101,7 @@ const About = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Vision */}
-            <Card className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in">
+            <Card className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in bg-muted/20">
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-primary-lighter rounded-2xl mb-6 flex items-center justify-center">
                   <Eye className="h-8 w-8 text-primary" />
@@ -108,7 +117,7 @@ const About = () => {
             </Card>
 
             {/* Mission */}
-            <Card className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in" style={{ animationDelay: '200ms' }}>
+            <Card className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in bg-muted/20" style={{ animationDelay: '200ms' }}>
               <CardContent className="p-8">
                 <div className="w-16 h-16 bg-secondary-lighter rounded-2xl mb-6 flex items-center justify-center">
                   <Target className="h-8 w-8 text-secondary" />
@@ -146,7 +155,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="bg-gradient-card rounded-3xl p-8 sm:p-12 shadow-card animate-fade-in">
+          <div className="bg-gradient-card rounded-3xl p-8 sm:p-12 shadow-card animate-fade-in bg-muted/30">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               <div className="lg:col-span-2">
                 <h3 className="text-2xl sm:text-3xl font-bold text-foreground mb-6">

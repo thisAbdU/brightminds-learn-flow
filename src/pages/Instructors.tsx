@@ -171,16 +171,25 @@ const Instructors = () => {
     <Layout>
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <section className="pt-0 pb-12 bg-gradient-hero text-white -mt-16">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <section className="pt-8 pb-12 bg-gradient-to-br from-[hsl(215_85%_25%)] to-[hsl(185_85%_45%)] text-white mt-8 relative overflow-hidden">
+          {/* Background overlay for better text readability */}
+          <div className="absolute inset-0 bg-black/10"></div>
+          
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="text-center animate-fade-in pt-16">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-white drop-shadow-lg">
                 {t("instructors.hero.title")}
               </h1>
-              <p className="text-xl sm:text-2xl opacity-90 max-w-3xl mx-auto">
+              <p className="text-xl sm:text-2xl text-white/95 max-w-3xl mx-auto drop-shadow-md leading-relaxed">
                 {t("instructors.hero.subtitle")}
               </p>
             </div>
+          </div>
+          
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-full h-full opacity-5">
+            <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-3xl"></div>
+            <div className="absolute bottom-20 right-10 w-24 h-24 bg-white rounded-full blur-3xl"></div>
           </div>
         </section>
 
@@ -236,7 +245,7 @@ const Instructors = () => {
               {filteredInstructors.map((instructor, index) => (
                 <Card 
                   key={instructor.id} 
-                  className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in"
+                  className="hover-lift transition-all duration-300 border-0 shadow-card animate-fade-in bg-muted/20"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
                   <CardHeader className="text-center pb-4">
@@ -352,7 +361,7 @@ const Instructors = () => {
         {/* CTA Section */}
         <section className="py-12 bg-muted/30">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <div className="bg-gradient-card rounded-3xl p-8 shadow-card">
+            <div className="bg-gradient-card rounded-3xl p-8 shadow-card bg-muted/30">
               <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
                 {t("instructors.cta.title")}
               </h2>
