@@ -13,13 +13,13 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center space-x-3 mb-4">
               <img 
-                src="/lovable-uploads/978aaafd-1f38-4ca2-b83a-71df4a85768c.png" 
+                src="/bright_minds_logo.svg" 
                 alt="Bright Minds Logo" 
-                className="h-12 w-auto brightness-0 invert"
+                className="h-12 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-bold">Bright Minds</span>
-                <span className="text-sm opacity-90">Tutoring Center</span>
+                <span className="text-xl font-bold text-primary">{t("navbar.brandName")}</span>
+                <span className="text-sm text-muted-foreground">{t("navbar.tagline")}</span>
               </div>
             </div>
             <p className="text-sm opacity-90 mb-4">

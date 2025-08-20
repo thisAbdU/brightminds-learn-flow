@@ -26,7 +26,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3 hover-lift">
             <img 
-              src="/lovable-uploads/978aaafd-1f38-4ca2-b83a-71df4a85768c.png" 
+              src="/bright_minds_logo.svg" 
               alt="Bright Minds Logo" 
               className="h-10 w-auto"
             />
