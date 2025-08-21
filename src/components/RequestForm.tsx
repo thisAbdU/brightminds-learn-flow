@@ -7,7 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
-import { X, Send, User, Phone, Mail, MapPin, BookOpen, Clock, Calendar, MessageSquare } from "lucide-react";
+import { X, Send, User, Phone, Mail, MapPin, BookOpen, Clock, Calendar, MessageSquare, CheckCircle, ExternalLink } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
@@ -89,88 +89,72 @@ const RequestForm = ({ isOpen, onClose, selectedTutor }: RequestFormProps) => {
     return errors.length === 0;
   };
 
-  const sendTelegramMessage = async (message: string) => {
-    // Replace with your actual Telegram bot token and chat ID
-    const botToken = process.env.NEXT_PUBLIC_TELEGRAM_BOT_TOKEN || "YOUR_BOT_TOKEN";
-    const chatId = process.env.NEXT_PUBLIC_TELEGRAM_CHAT_ID || "YOUR_CHAT_ID";
-    
-    const telegramUrl = `https://api.telegram.org/bot${botToken}/sendMessage`;
-    
-    try {
-      const response = await fetch(telegramUrl, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: message,
-          parse_mode: "HTML"
-        })
-      });
-
-      if (!response.ok) {
-        throw new Error("Failed to send Telegram message");
-      }
-
-      return true;
-    } catch (error) {
-      console.error("Error sending Telegram message:", error);
-      return false;
-    }
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     if (!validateForm()) {
-      return; // Don't show alert, validation errors are displayed below
+      return;
     }
 
     setIsSubmitting(true);
-
-    const message = `
-<b>${t("telegram.newRequest")}</b>
-
-${selectedTutor ? `<b>${t("telegram.selectedTutor")}</b> ${selectedTutor.name}` : `<b>${t("telegram.generalContact")}</b>`}
-
-<b>${t("telegram.parentInformation")}</b>
-👤 <b>${t("telegram.fullName")}</b> ${formData.parentFullName}
-📱 <b>${t("telegram.phone")}</b> ${formData.parentPhoneNumber}
-📧 <b>${t("telegram.email")}</b> ${formData.email}
-
-<b>${t("telegram.locationSchedule")}</b>
-📍 <b>${t("telegram.homeAddress")}</b> ${formData.homeAddress}
-📚 <b>${t("telegram.gradeLevel")}</b> ${formData.gradeLevel}
-⏰ <b>${t("telegram.hoursPerDay")}</b> ${formData.hoursPerDay}
-📅 <b>${t("telegram.daysPerWeek")}</b> ${formData.daysPerWeek}
-
-${formData.specialNeeds ? `<b>${t("telegram.specialNeeds")}</b>\n${formData.specialNeeds}` : ""}
-
-${selectedTutor ? `
-<b>${t("telegram.tutorDetails")}</b>
-📚 <b>${t("telegram.subjects")}</b> ${selectedTutor.subjects.join(", ")}
-🗺️ <b>${t("telegram.areaCoverage")}</b> ${selectedTutor.areaCoverage.join(", ")}
-` : ""}
-
-<i>${t("telegram.submittedAt")} ${new Date().toLocaleString()}</i>
-    `.trim();
-
-    const success = await sendTelegramMessage(message);
-
-    if (success) {
+    
+    // Simulate processing time
+    setTimeout(() => {
       setSubmitStatus("success");
-      setTimeout(() => {
-        onClose();
-      }, 2000);
-    } else {
-      setSubmitStatus("error");
-    }
+      setIsSubmitting(false);
+    }, 1000);
+  };
 
-    setIsSubmitting(false);
+  const handleContactTelegram = () => {
+    // Open Telegram contact
+    window.open('https://t.me/BrightMinds_tutor', '_blank');
   };
 
   if (!isOpen) return null;
+
+  // Show success screen
+  if (submitStatus === "success") {
+    return (
+      <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+        <Card className="w-full max-w-md">
+          <CardContent className="pt-6 text-center space-y-6">
+            <div className="flex justify-center">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                <CheckCircle className="w-8 h-8 text-green-600" />
+              </div>
+            </div>
+            
+            <div className="space-y-2">
+              <h3 className="text-xl font-semibold text-green-600">
+                {t("requestForm.success.title") || "Request Submitted Successfully!"}
+              </h3>
+              <p className="text-muted-foreground">
+                {t("requestForm.success.message") || "Thank you for your request. Please contact us on Telegram to proceed with your tutoring request."}
+              </p>
+            </div>
+
+            <div className="space-y-3">
+              <Button 
+                onClick={handleContactTelegram}
+                className="w-full gradient-primary text-white hover:opacity-90 transition-opacity"
+              >
+                <ExternalLink className="w-4 h-4 mr-2" />
+                Contact us on Telegram
+              </Button>
+              
+              <Button 
+                variant="outline" 
+                onClick={onClose}
+                className="w-full"
+              >
+                Close
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    );
+  }
 
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
@@ -409,8 +393,6 @@ ${selectedTutor ? `
               >
                 {isSubmitting ? (
                   t("requestForm.buttons.sending")
-                ) : submitStatus === "success" ? (
-                  t("requestForm.buttons.sentSuccessfully")
                 ) : (
                   <>
                     <Send className="h-4 w-4 mr-2" />
@@ -419,12 +401,6 @@ ${selectedTutor ? `
                 )}
               </Button>
             </div>
-
-            {submitStatus === "error" && (
-              <div className="text-red-600 text-sm text-center">
-                {t("requestForm.errors.failedToSend")}
-              </div>
-            )}
           </form>
         </CardContent>
       </Card>

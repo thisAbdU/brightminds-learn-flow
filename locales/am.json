@@ -621,6 +621,10 @@
         "requiredFields": "ያስፈልጋል",
         "termsAgreement": "በደንቦች እና ሁኔታዎች መስማማት አለብዎት"
       },
+      "success": {
+        "title": "ጥያቄዎ በተሳካ ሁኔታ ተልኳል!",
+        "message": "ስለ ጥያቄዎ እናመሰግናለን። ከማጠናከሪያ ጥያቄዎ ጋር ለመቀጠል እባክዎ በቴሌግራም ያግኙን።"
+      },
       "buttons": {
         "cancel": "ሰርዝ",
         "submitRequest": "ጥያቄ አስገባ",

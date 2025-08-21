@@ -619,6 +619,10 @@
       "requiredFields": "is required",
       "termsAgreement": "You must agree to the Terms and Conditions"
     },
+    "success": {
+      "title": "Request Submitted Successfully!",
+      "message": "Thank you for your request. Please contact us on Telegram to proceed with your tutoring request."
+    },
     "buttons": {
       "cancel": "Cancel",
       "submitRequest": "Submit Request",

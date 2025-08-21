@@ -620,6 +620,10 @@
         "requiredFields": "barbaachisaadha",
         "termsAgreement": "Seerotaafi Haalawwan waliin walii galuu qabda"
       },
+      "success": {
+        "title": "Gaaffiin keessan milkaa'inaan ergameera!",
+        "message": "Gaaffii keessaniif galatoomaa. Gaaffii gargaarsa barnootaa keessan itti fufsiisuuf maaloo Telegramiin nu qunnamaa."
+      },
       "buttons": {
         "cancel": "Haqi",
         "submitRequest": "Gaaffii Galchi",
