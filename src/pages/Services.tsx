@@ -75,13 +75,11 @@ const Services = () => {
   const samplePackages = [
     {
       name: t("services.packages.weekly.name"),
-      sessions: t("services.packages.weekly.sessions"),
       features: t("services.packages.weekly.features"),
       popular: false
     },
     {
       name: t("services.packages.monthly.name"),
-      sessions: t("services.packages.monthly.sessions"),
       features: t("services.packages.monthly.features"),
       popular: true
     }
@@ -159,7 +157,16 @@ const Services = () => {
                     <Button 
                       className={`mt-6 w-full gradient-primary text-white hover:opacity-90 transition-opacity`}
                     >
-                      <Link to="/instructors" className="flex items-center justify-center">
+                      <Link 
+                        to="/instructors" 
+                        className="flex items-center justify-center"
+                        onClick={() => {
+                          // Scroll down a bit when the page loads
+                          setTimeout(() => {
+                            window.scrollTo(0, 150); // Scrolls down 100px
+                          }, 100);
+                        }}
+                      >
                         {t("servicesSection.cta")}
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
@@ -272,9 +279,6 @@ const Services = () => {
                   <CardTitle className="text-xl font-bold text-foreground">
                     {pkg.name}
                   </CardTitle>
-                  <p className="text-lg font-semibold text-secondary">
-                    {pkg.sessions}
-                  </p>
                 </CardHeader>
                 <CardContent>
                   <ul className="space-y-3">
@@ -297,10 +301,19 @@ const Services = () => {
                     } transition-all`}
                     variant={pkg.popular ? 'default' : 'outline'}
                   >
-                    <Link to="/instructors" className="flex items-center justify-center">
-                      {t("services.packages.chooseThisPackage")}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Link>
+                  <Link 
+                    to="/instructors" 
+                    className="flex items-center justify-center"
+                    onClick={() => {
+                      // Scroll down a bit when the page loads
+                      setTimeout(() => {
+                        window.scrollTo(0, 150); // Scrolls down 100px
+                      }, 100);
+                    }}
+                  >
+                    {t("servicesSection.cta")}
+                    <ArrowRight className="ml-2 h-4 w-4" />
+                  </Link>
                   </Button>
                 </CardContent>
               </Card>
@@ -324,9 +337,18 @@ const Services = () => {
                 size="lg" 
                 className="gradient-primary text-white hover:opacity-90 transition-opacity"
               >
-                <Link to="/instructors" className="flex items-center">
-                  {t("services.cta.button")}
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                <Link 
+                  to="/instructors" 
+                  className="flex items-center justify-center"
+                  onClick={() => {
+                    // Scroll down a bit when the page loads
+                    setTimeout(() => {
+                      window.scrollTo(0, 150); // Scrolls down 100px
+                    }, 100);
+                  }}
+                >
+                  {t("servicesSection.cta")}
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>

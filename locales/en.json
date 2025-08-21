@@ -24,7 +24,7 @@
     "home": "Home",
     "aboutUs": "About Us",
     "services": "Services",
-    "instructors": "Instructors",
+    "instructors": "Tutors",
     "findTutor": "Find Tutor",
     "contactUs": "Contact Us"
   },
@@ -174,11 +174,11 @@
   },
   "instructors": {
     "hero": {
-      "title": "Find Your Perfect Instructor",
+      "title": "Find Your Perfect Tutor",
       "subtitle": "Connect with Ethiopia's top medical students and professionals"
     },
     "search": {
-      "placeholder": "Search by subject or instructor name...",
+      "placeholder": "Search by subject or tutor name...",
       "quickFilters": {
         "mathematics": "Mathematics",
         "physics": "Physics",
@@ -188,7 +188,7 @@
       }
     },
     "filters": {
-      "title": "Available Instructors",
+      "title": "Available tutors",
       "filterButton": "Filter"
     },
     "instructorCard": {
@@ -202,8 +202,8 @@
       "viewProfile": "View Profile"
     },
     "noResults": {
-      "title": "No instructors found",
-      "description": "Try adjusting your search criteria or browse all instructors"
+      "title": "No tutors found",
+      "description": "Try adjusting your search criteria or browse all tutors"
     },
     "cta": {
       "title": "Can't Find the Right Tutor?",
@@ -339,7 +339,6 @@
         "name": "Weekly Package",
         "sessions": "4 sessions per month",
         "features": [
-          "1 session per week",
           "Subject consistency",
           "Progress tracking",
           "Tutor continuity"
@@ -349,7 +348,6 @@
         "name": "Monthly Premium",
         "sessions": "8 sessions per month",
         "features": [
-          "2 sessions per week",
           "Multi-subject support",
           "Priority scheduling",
           "Progress reports",

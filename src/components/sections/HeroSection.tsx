@@ -1,37 +1,59 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import { useLocalizationContext } from "@/contexts/LocalizationContext";
+
 const HeroSection = () => {
   const { t } = useLocalizationContext();
 
-  const [currentText, setCurrentText] = useState(0);
-  const [isTyping, setIsTyping] = useState(true);
+  const [currentImage, setCurrentImage] = useState(0);
   
-  const typingTexts = [
-    t("heroSection.selfConfidence"),
-    t("heroSection.brightFuture"), 
-    t("heroSection.success"),
-    t("heroSection.excellence")
+  const backgroundImages = [
+    "/image_1.png",
+    "/image_2.png"
   ];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIsTyping(false);
-      setTimeout(() => {
-        setCurrentText((prev) => (prev + 1) % typingTexts.length);
-        setIsTyping(true);
-      }, 500);
-    }, 3000);
+      setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+    }, 5000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);
+
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % backgroundImages.length);
+  };
+
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + backgroundImages.length) % backgroundImages.length);
+  };
+
+  const goToImage = (index: number) => {
+    setCurrentImage(index);
+  };
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Gradient */}
       <div className="absolute inset-0 gradient-hero opacity-5"></div>
+      
+      {/* Carousel Background Images */}
+      <div className="absolute inset-0">
+        {backgroundImages.map((image, index) => (
+          <div
+            key={image}
+            className={`absolute inset-0 bg-cover bg-center bg-no-repeat transition-opacity duration-1000 ${
+              index === currentImage ? 'opacity-100' : 'opacity-0'
+            }`}
+            style={{
+              backgroundImage: `url('${image}')`,
+              filter: "brightness(0.7) contrast(1.1)"
+            }}
+          />
+        ))}
+      </div>
       
       {/* Addis Ababa City Map Background */}
       <div 
@@ -50,26 +72,49 @@ const HeroSection = () => {
         <div className="absolute bottom-40 right-10 w-12 h-12 bg-secondary/30 rotate-45"></div>
       </div>
 
+      {/* Carousel Navigation Arrows */}
+      <button
+        onClick={prevImage}
+        className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+      >
+        <ChevronLeft className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+      </button>
+      
+      <button
+        onClick={nextImage}
+        className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+      >
+        <ChevronRight className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+      </button>
+
+      {/* Carousel Dots */}
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        {backgroundImages.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToImage(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              index === currentImage 
+                ? 'bg-white scale-125' 
+                : 'bg-white/50 hover:bg-white/75'
+            }`}
+          />
+        ))}
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Content */}
           <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
-             {t("heroSection.title.a")}
-              <span className="gradient-primary bg-clip-text text-transparent">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+              {t("heroSection.title.a")}
+              <span className="gradient-primary bg-clip-text text-transparent drop-shadow-none">
                 {t("heroSection.title.b")}
               </span>{" "}
               {t("heroSection.title.c")}
-              <span 
-                className={`inline-block text-secondary transition-all duration-500 ${
-                  isTyping ? 'opacity-100' : 'opacity-0'
-                }`}
-              >
-                {typingTexts[currentText]}
-              </span>
             </h1>
             
-            <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl">
+            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl drop-shadow-lg">
               {t("heroSection.subtitle")}
             </p>
 
@@ -78,59 +123,28 @@ const HeroSection = () => {
                 size="lg" 
                 className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-primary group"
               >
-                <Link to="/instructors" className="flex items-center">
+                <Link 
+                  to="/instructors" 
+                  className="flex items-center justify-center"
+                  onClick={() => {
+                    // Scroll down a bit when the page loads
+                    setTimeout(() => {
+                      window.scrollTo(0, 150); // Scrolls down 100px
+                    }, 100);
+                  }}
+                >
                   {t("heroSection.primaryCta")}
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Right Column - Visual */}
+          {/* Right Column - Empty for balance */}
           <div className="relative animate-slide-up">
-            <div className="relative">
-              {/* Main Image Placeholder */}
-              <div className="bg-gradient-card rounded-3xl p-8 shadow-card hover-lift">
-                <div className="grid grid-cols-2 gap-4">
-                  {/* Student Cards */}
-                  <div className="bg-primary-lighter rounded-2xl p-4 text-center">
-                    <div className="w-16 h-16 bg-primary rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <span className="text-2xl">📚</span>
-                    </div>
-                    <h3 className="font-semibold text-primary mb-1">{t("heroSection.selfConfidence")}</h3>
-                    <p className="text-xs text-muted-foreground">{t("heroSection.selfConfidenceDescription")}</p>
-                  </div>
-                  
-                  <div className="bg-secondary-lighter rounded-2xl p-4 text-center">
-                    <div className="w-16 h-16 bg-secondary rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <span className="text-2xl">🎯</span>
-                    </div>
-                    <h3 className="font-semibold text-secondary mb-1">{t("heroSection.brightFuture")}</h3>
-                    <p className="text-xs text-muted-foreground">{t("heroSection.brightFutureDescription")}</p>
-                  </div>
-                  
-                  <div className="bg-accent/20 rounded-2xl p-4 text-center">
-                    <div className="w-16 h-16 bg-accent rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <span className="text-2xl">⭐</span>
-                    </div>
-                    <h3 className="font-semibold text-accent mb-1">{t("heroSection.excellence")}</h3>
-                    <p className="text-xs text-muted-foreground">{t("heroSection.excellenceDescription")}</p>
-                  </div>
-                  
-                  <div className="bg-success/20 rounded-2xl p-4 text-center">
-                    <div className="w-16 h-16 bg-success rounded-full mx-auto mb-3 flex items-center justify-center">
-                      <span className="text-2xl">🚀</span>
-                    </div>
-                    <h3 className="font-semibold text-success mb-1">{t("heroSection.success")}</h3>
-                    <p className="text-xs text-muted-foreground">{t("heroSection.successDescription")}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Floating Elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-secondary rounded-full animate-bounce"></div>
-              <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full animate-pulse"></div>
-            </div>
+            {/* Floating Elements */}
+            <div className="absolute -top-4 -right-4 w-8 h-8 bg-secondary rounded-full animate-bounce shadow-lg"></div>
+            <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full animate-pulse shadow-lg"></div>
           </div>
         </div>
       </div>

@@ -172,9 +172,18 @@ const About = () => {
                     size="lg" 
                     className="gradient-primary text-white hover:opacity-90 transition-opacity"
                   >
-                    <Link to="/instructors" className="flex items-center">
+                    <Link 
+                      to="/instructors" 
+                      className="flex items-center justify-center"
+                      onClick={() => {
+                        // Scroll down a bit when the page loads
+                        setTimeout(() => {
+                          window.scrollTo(0, 150); // Scrolls down 100px
+                        }, 100);
+                      }}
+                    >
                       {t("about.coreDifference.buttons.meetTutors")}
-                      <ArrowRight className="ml-2 h-5 w-5" />
+                      <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
                   <Button 

@@ -24,7 +24,7 @@
       "home": "መነሻ",
       "aboutUs": "ስለ እኛ",
       "services": "አገልግሎቶች",
-      "instructors": "አስተማሪዎች",
+      "instructors": "አስጠኚዎች",
       "findTutor": "አስጠኚ ፈልግ",
       "contactUs": "ያግኙን"
     },
@@ -38,7 +38,7 @@
       "quickLinks": "ፈጣን አገናኞች",
       "ourServices": "አገልግሎቶቻችን",
       "contactUs": "ያግኙን",
-      "findYourInstructor": "አስተማሪዎን ይፈልጉ",
+      "findYourInstructor": "አስጠኚዎን ይፈልጉ",
       "oneOnOneTutoring": "የአንድ ለአንድ ማጠናከሪያ",
       "groupTutoringSessions": "የቡድን ማጠናከሪያ ክፍለ ጊዜዎች",
       "subjectSpecificSupport": "የትምህርት አይነት-ተኮር ድጋፍ",
@@ -175,11 +175,11 @@
     },
     "instructors": {
       "hero": {
-        "title": "ትክክለኛ አስተማሪዎን ይፈልጉ",
+        "title": "ትክክለኛ አስጠኚዎን ይፈልጉ",
         "subtitle": "ከኢትዮጵያ ምርጥ የህክምና ተማሪዎች እና ባለሙያዎች ጋር ይገናኙ"
       },
       "search": {
-        "placeholder": "በትምህርት አይነት ወይም በአስተማሪ ስም ይፈልጉ...",
+        "placeholder": "በትምህርት አይነት ወይም በአስጠኚ ስም ይፈልጉ...",
         "quickFilters": {
           "mathematics": "ሒሳብ",
           "physics": "ፊዚክስ",
@@ -189,7 +189,7 @@
         }
       },
       "filters": {
-        "title": "ያሉ አስተማሪዎች",
+        "title": "ያሉ አስጠኚዎች",
         "filterButton": "አጣራ"
       },
       "instructorCard": {
@@ -203,12 +203,12 @@
         "viewProfile": "መገለጫ ይመልከቱ"
       },
       "noResults": {
-        "title": "ምንም አስተማሪዎች አልተገኙም",
-        "description": "የፍለጋ መስፈርትዎን ለማስተካከል ይሞክሩ ወይም ሁሉንም አስተማሪዎች ያስሱ"
+        "title": "ምንም አስጠኚዎች አልተገኙም",
+        "description": "የፍለጋ መስፈርትዎን ለማስተካከል ይሞክሩ ወይም ሁሉንም አስጠኚዎች ያስሱ"
       },
       "cta": {
         "title": "ትክክለኛውን አስጠኚ ማግኘት አልቻሉም?",
-        "description": "ያግኙን እና ለፍላጎትዎ ትክክለኛውን አስተማሪ እንዲያገኙ እንረዳዎታለን",
+        "description": "ያግኙን እና ለፍላጎትዎ ትክክለኛውን አስጠኚ እንዲያገኙ እንረዳዎታለን",
         "contactUs": "ያግኙን",
         "browseSubjects": "ሁሉንም የትምህርት አይነቶች ያስሱ"
       },
@@ -335,13 +335,12 @@
       },
       "packages": {
         "chooseThisPackage": "ይህንን ጥቅል ይምረጡ",
-        "title": "ናሙና የምዝገባ ፓኬጆች",
+        "title": "የምዝገባ ፓኬጆች",
         "subtitle": "በተማሪዎቻችን እና በቤተሰቦቻችን የተመረጡ ተወዳጅ ፓኬጆች",
         "weekly": {
           "name": "ሳምንታዊ ፓኬጅ",
           "sessions": "በወር 4 ክፍለ ጊዜዎች",
           "features": [
-            "በሳምንት 1 ክፍለ ጊዜ",
             "የትምህርት አይነት ወጥነት",
             "የሂደት ክትትል",
             "የአስጠኚ ቀጣይነት"
@@ -351,7 +350,6 @@
           "name": "ወርሃዊ ፕሪሚየም",
           "sessions": "በወር 8 ክፍለ ጊዜዎች",
           "features": [
-            "በሳምንት 2 ክፍለ ጊዜዎች",
             "የብዙ የትምህርት አይነቶች ድጋፍ",
             "ቅድሚያ የሚሰጠው ፕሮግራም",
             "የሂደት ሪፖርቶች",

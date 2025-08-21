@@ -92,7 +92,16 @@ const ServicesSection = () => {
                 <Button 
                   className={`mt-6 w-full gradient-primary text-white hover:opacity-90 transition-opacity`}
                 >
-                  <Link to="/instructors" className="flex items-center justify-center">
+                  <Link 
+                    to="/instructors" 
+                    className="flex items-center justify-center"
+                    onClick={() => {
+                      // Scroll down a bit when the page loads
+                      setTimeout(() => {
+                        window.scrollTo(0, 150); // Scrolls down 100px
+                      }, 100);
+                    }}
+                  >
                     {t("servicesSection.cta")}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Link>
