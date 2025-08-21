@@ -75,9 +75,9 @@ const HeroSection = () => {
       {/* Loading State */}
       {isLoading && (
         <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center z-30">
-          <div className="text-center">
-            <Loader2 className="h-12 w-12 text-white animate-spin mx-auto mb-4" />
-            <p className="text-white text-lg font-medium">Loading amazing content...</p>
+          <div className="text-center px-4">
+            <Loader2 className="h-8 w-8 sm:h-12 sm:w-12 text-white animate-spin mx-auto mb-3 sm:mb-4" />
+            <p className="text-white text-base sm:text-lg font-medium">Loading amazing content...</p>
           </div>
         </div>
       )}
@@ -107,41 +107,41 @@ const HeroSection = () => {
         }}
       ></div>
       
-      {/* Geometric Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
+      {/* Geometric Background Elements - Hidden on mobile for cleaner look */}
+      <div className="absolute inset-0 overflow-hidden hidden sm:block">
         <div className="absolute top-20 left-10 w-20 h-20 bg-secondary-lighter rounded-full opacity-60 animate-pulse"></div>
         <div className="absolute top-40 right-20 w-16 h-16 bg-primary-lighter rounded-full opacity-40"></div>
         <div className="absolute bottom-20 left-20 w-24 h-24 bg-accent/20 rounded-full"></div>
         <div className="absolute bottom-40 right-10 w-12 h-12 bg-secondary/30 rotate-45"></div>
       </div>
 
-      {/* Carousel Navigation Arrows - Only show when images are loaded */}
+      {/* Carousel Navigation Arrows - Responsive sizing and positioning */}
       {!isLoading && (
         <>
           <button
             onClick={prevImage}
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+            className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 group"
           >
-            <ChevronLeft className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+            <ChevronLeft className="h-4 w-4 sm:h-6 sm:w-6 text-white group-hover:scale-110 transition-transform" />
           </button>
           
           <button
             onClick={nextImage}
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-3 transition-all duration-300 group"
+            className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 z-20 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-full p-2 sm:p-3 transition-all duration-300 group"
           >
-            <ChevronRight className="h-6 w-6 text-white group-hover:scale-110 transition-transform" />
+            <ChevronRight className="h-4 w-4 sm:h-6 sm:w-6 text-white group-hover:scale-110 transition-transform" />
           </button>
         </>
       )}
 
-      {/* Carousel Dots - Only show when images are loaded */}
+      {/* Carousel Dots - Responsive positioning and sizing */}
       {!isLoading && (
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+        <div className="absolute bottom-4 sm:bottom-8 left-1/2 transform -translate-x-1/2 z-20 flex space-x-2 sm:space-x-3">
           {backgroundImages.map((_, index) => (
             <button
               key={index}
               onClick={() => goToImage(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${
                 index === currentImage 
                   ? 'bg-white scale-125' 
                   : 'bg-white/50 hover:bg-white/75'
@@ -151,11 +151,11 @@ const HeroSection = () => {
         </div>
       )}
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Content */}
-          <div className="text-center lg:text-left animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-white drop-shadow-lg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+          {/* Left Column - Content - Mobile optimized */}
+          <div className="text-center lg:text-left animate-fade-in order-2 lg:order-1">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight mb-4 sm:mb-6 text-white drop-shadow-lg">
               {t("heroSection.title.a")}
               <span className="gradient-primary bg-clip-text text-transparent drop-shadow-none">
                 {t("heroSection.title.b")}
@@ -163,14 +163,14 @@ const HeroSection = () => {
               {t("heroSection.title.c")}
             </h1>
             
-            <p className="text-lg sm:text-xl text-white/90 mb-8 max-w-2xl drop-shadow-lg">
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl mx-auto lg:mx-0 drop-shadow-lg leading-relaxed">
               {t("heroSection.subtitle")}
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center lg:justify-start">
               <Button 
                 size="lg" 
-                className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-primary group"
+                className="gradient-primary text-white hover:opacity-90 transition-opacity shadow-primary group text-sm sm:text-base px-6 sm:px-8 py-2 sm:py-3"
               >
                 <Link 
                   to="/instructors" 
@@ -183,14 +183,14 @@ const HeroSection = () => {
                   }}
                 >
                   {t("heroSection.primaryCta")}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-3 w-3 sm:h-4 sm:w-4" />
                 </Link>
               </Button>
             </div>
           </div>
 
-          {/* Right Column - Empty for balance */}
-          <div className="relative animate-slide-up">
+          {/* Right Column - Empty for balance - Hidden on mobile */}
+          <div className="relative animate-slide-up order-1 lg:order-2 hidden lg:block">
             {/* Floating Elements */}
             <div className="absolute -top-4 -right-4 w-8 h-8 bg-secondary rounded-full animate-bounce shadow-lg"></div>
             <div className="absolute -bottom-4 -left-4 w-6 h-6 bg-primary rounded-full animate-pulse shadow-lg"></div>
