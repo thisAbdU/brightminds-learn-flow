@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
-import { Phone, Mail, MessageCircle } from "lucide-react";
+import { Phone, Mail } from "lucide-react";
+import { SocialIcon } from "react-social-icons";
 import { useLocalizationContext } from "@/contexts/LocalizationContext";
 
 const Footer = () => {
@@ -18,29 +19,13 @@ const Footer = () => {
                 className="h-12 w-auto"
               />
               <div className="flex flex-col">
-                <span className="text-xl font-bold text-primary">{t("navbar.brandName")}</span>
+                <span className="text-xl font-bold text-primary text-white">{t("navbar.brandName")}</span>
                 <span className="text-sm text-muted-foreground">{t("navbar.tagline")}</span>
               </div>
             </div>
             <p className="text-sm opacity-90 mb-4">
               {t("footer.motto")}
             </p>
-            <div className="flex space-x-4">
-              <a 
-                href="#" 
-                className="text-primary-foreground hover:text-secondary transition-colors"
-                aria-label={t("footer.tiktok")}
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
-              <a 
-                href="https://t.me/BrightMinds_tutor" 
-                className="text-primary-foreground hover:text-secondary transition-colors"
-                aria-label={t("footer.telegram")}
-              >
-                <MessageCircle className="h-5 w-5" />
-              </a>
-            </div>
           </div>
 
           {/* Quick Links */}
@@ -142,12 +127,33 @@ const Footer = () => {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <MessageCircle className="h-4 w-4 text-secondary" />
+                <SocialIcon 
+                  url="https://t.me/BrightMinds_tutor"
+                  network="telegram"
+                  fgColor="white"
+                  bgColor="transparent"
+                  className="hover:scale-110 transition-transform !h-4 !w-4"
+                />
                 <a 
                   href="https://t.me/BrightMinds_tutor" 
                   className="text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors"
                 >
-                  @BrightMinds_tutor
+                  Telegram
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <SocialIcon 
+                  url="https://www.tiktok.com/@brightmindshometutor"
+                  network="tiktok"
+                  fgColor="white"
+                  bgColor="transparent"
+                  className="hover:scale-110 transition-transform !h-6 !w-6"
+                />
+                <a 
+                  href="https://www.tiktok.com/@brightmindshometutor" 
+                  className="text-sm opacity-90 hover:opacity-100 hover:text-secondary transition-colors"
+                >
+                  TikTok
                 </a>
               </div>
             </div>
