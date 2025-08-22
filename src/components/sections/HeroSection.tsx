@@ -13,7 +13,8 @@ const HeroSection = () => {
   
   const backgroundImages = [
     "/image_1.png",
-    "/image_2.png"
+    "/image_2.png",
+    "/image_3.png",
   ];
 
   // Preload images and track loading state
